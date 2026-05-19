@@ -2685,8 +2685,8 @@ CFGL1_OUT_STATE:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_cfgl.c"
@@ -4035,8 +4035,6 @@ CFGL1_OUT_STATE:
 	.string	"m_G3D1_Inphase_EN"
 .LASF77:
 	.string	"CFGL2_FALLINT_Enable"
-.LASF93:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF14:
 	.string	"sizetype"
 .LASF53:
@@ -4161,6 +4159,8 @@ CFGL1_OUT_STATE:
 	.string	"m_G2D1_Inphase_EN"
 .LASF22:
 	.string	"m_Mode_Sel"
+.LASF93:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF41:
 	.string	"m_G4D1_Inverse_EN"
 .LASF31:

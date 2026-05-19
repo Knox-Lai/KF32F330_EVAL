@@ -1,12 +1,12 @@
 # 1 "../Peripherals/src/kf32f_basic_rtc.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Release//"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Release//"
 # 1 "<command-line>"
 # 1 "../Peripherals/src/kf32f_basic_rtc.c"
 # 19 "../Peripherals/src/kf32f_basic_rtc.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_osc.h" 1
-# 14 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_osc.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 20 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_osc.h" 1
+# 14 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_osc.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 20 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h" 1
 # 16 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h" 1
@@ -69,13 +69,13 @@ typedef unsigned long long uint_fast64_t;
 
 typedef long long intmax_t;
 typedef unsigned long long uintmax_t;
-# 21 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj/__Kungfu32_chipmodel_define.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 2
-# 22 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL/__Kungfu32_chipmodel_define.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 2
+# 22 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef enum
 {
     FALSE = 0,
@@ -199,7 +199,7 @@ typedef enum {
     INT_USART6 = 78,
     INT_USART7 = 79,
 } InterruptIndex;
-# 171 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 171 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPIO_MemMap {
     volatile const uint32_t PIR;
     volatile uint32_t POR;
@@ -213,7 +213,7 @@ typedef struct GPIO_MemMap {
                 uint32_t RESERVED;
     volatile uint32_t CTMDCTL[2];
 }GPIO_SFRmap;
-# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct OSC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -227,7 +227,7 @@ typedef struct OSC_MemMap {
 typedef struct PLL_MemMap {
    volatile uint32_t CTL;
 }PLL_SFRmap;
-# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct INT_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t EIE0;
@@ -270,7 +270,7 @@ typedef struct INT_MemMap {
     volatile uint32_t EINTSS1;
     volatile uint32_t CTL1;
 }INT_SFRmap;
-# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSCTL_MemMap {
     volatile uint32_t PSW;
     volatile uint32_t MCTL;
@@ -280,7 +280,7 @@ typedef struct SYSCTL_MemMap {
     volatile uint32_t RAMSPA;
     volatile uint32_t MEMCTL;
 }SYSCTL_SFRmap;
-# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ADC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -309,7 +309,7 @@ typedef struct ADC_Delay_MemMap
 {
     volatile uint32_t DELAY;
 }ADC_DELAY_SFRmap;
-# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DMA_MemMap {
     union {
         struct
@@ -398,14 +398,14 @@ typedef struct DMA_MemMap {
     volatile uint32_t LIFR;
     volatile uint32_t LIER;
 }DMA_SFRmap;
-# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSTICK_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t RELOAD;
     volatile uint32_t CV;
     volatile uint32_t CALI;
 }SYSTICK_SFRmap;
-# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -416,7 +416,7 @@ typedef struct BTIM_MemMap {
     volatile const uint32_t SR;
     volatile uint32_t SRIC;
 }BTIM_SFRmap;
-# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -441,7 +441,7 @@ typedef struct GPTIM_MemMap {
     volatile uint32_t CCPXCTL3;
     volatile uint32_t CCPXEGIF;
 }GPTIM_SFRmap, CCP_SFRmap;
-# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ATIM_MemMap {
     volatile uint32_t TXCNT;
     volatile uint32_t TZCNT;
@@ -486,7 +486,7 @@ typedef struct ATIM_MemMap {
     volatile uint32_t ECCPXSRIC;
     volatile uint32_t ECCPXCTL3;
 }ATIM_SFRmap, ECCP_SFRmap;
-# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct QEI_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -495,7 +495,7 @@ typedef struct QEI_MemMap {
     volatile uint32_t PRSC;
     volatile uint32_t DIER;
 }QEI_SFRmap;
-# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DAC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DAHD;
@@ -504,7 +504,7 @@ typedef struct DAC_MemMap {
                    uint32_t RESERVED;
     volatile uint32_t CAL;
 }DAC_SFRmap;
-# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CMP_MemMap {
     volatile uint32_t CTL;
 
@@ -513,7 +513,7 @@ typedef struct CMP_MemMap {
 
 
 }CMP_SFRmap;
-# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RTC_MemMap {
     volatile uint32_t CR;
     volatile uint32_t ALRA;
@@ -527,38 +527,38 @@ typedef struct RTC_MemMap {
     volatile uint32_t TMBR;
     volatile uint32_t DTBR;
 }RTC_SFRmap;
-# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct IWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t FD;
 }IWDT_SFRmap;
-# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct WWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t CNT;
 }WWDT_SFRmap;
-# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RST_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }RST_SFRmap;
-# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PCLK_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }PCLK_SFRmap;
-# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SPI_MemMap {
     volatile uint32_t BRGR;
     volatile uint32_t CTLR;
     volatile uint32_t BUFR;
     volatile uint32_t STR;
 }SPI_SFRmap;
-# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct I2C_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t SR;
@@ -571,7 +571,7 @@ typedef struct I2C_MemMap {
     volatile uint32_t IER;
     volatile uint32_t TPSR;
 }I2C_SFRmap;
-# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USART_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -584,7 +584,7 @@ typedef struct USART_MemMap {
     volatile uint32_t IER;
     volatile uint32_t ADM;
 }USART_SFRmap;
-# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USB_MemMap {
     volatile uint32_t UCON;
     volatile const uint32_t USTAT;
@@ -595,7 +595,7 @@ typedef struct USB_MemMap {
     volatile uint32_t UEP[8];
     volatile uint32_t UDB;
 }USB_SFRmap;
-# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CAN_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -614,7 +614,7 @@ typedef struct CAN_MemMap {
     volatile const uint32_t RXDATA2;
     volatile const uint32_t RXDATA3;
 }CAN_SFRmap;
-# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PM_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -626,14 +626,14 @@ typedef struct PM_MemMap {
     volatile uint32_t CAL1;
     volatile uint32_t CAL2;
 }PM_SFRmap;
-# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BKP_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t INT;
              uint32_t RESERVED[14];
     volatile uint32_t DATA[32];
 }BKP_SFRmap;
-# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct FLASH_MemMap {
     volatile uint32_t ISPCON0;
     volatile uint32_t ISPCON1;
@@ -653,7 +653,7 @@ typedef struct FLASH_MemMap {
     volatile uint32_t CSSTOP;
     volatile uint32_t CSRES[4];
 }FLASH_SFRmap;
-# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CRC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DATA;
@@ -664,7 +664,7 @@ typedef struct CRC_MemMap {
     volatile uint32_t IDATA;
     volatile uint32_t TEMP;
 }CRC_SFRmap;
-# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct AES_MemMap {
     volatile uint32_t CTL;
        uint32_t RESERVED1;
@@ -683,7 +683,7 @@ typedef struct AES_MemMap {
     volatile uint32_t OUTPUT2;
     volatile uint32_t OUTPUT3;
 }AES_SFRmap;
-# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct EXIC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -693,19 +693,19 @@ typedef struct EXIC_MemMap {
     volatile uint32_t READBUF;
 
 }EXIC_SFRmap;
-# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CFGL_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t IFR;
 }CFGL_SFRmap;
-# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 static inline uint32_t
 SFR_Config (uint32_t SfrMem, uint32_t SfrMask, uint32_t WriteVal)
 {
     return ((SfrMem & SfrMask) | (WriteVal));
 }
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_osc.h" 2
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_osc.h" 2
 
 
 
@@ -726,7 +726,7 @@ typedef struct
     uint32_t m_StartDelay;
 
 } OSC_InitTypeDef;
-# 266 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_osc.h"
+# 266 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_osc.h"
 void OSC_SCLK_Configuration (OSC_InitTypeDef* oscInitStruct);
 void OSC_HFCK_Configuration (OSC_InitTypeDef* oscInitStruct);
 void OSC_LFCK_Configuration (OSC_InitTypeDef* oscInitStruct);
@@ -788,8 +788,8 @@ FlagStatus OSC_Get_INTLF_INT_Flag (void);
 FlagStatus OSC_Get_LP4MIF_INT_Flag (void);
 void OSC_PLL_RST(void);
 # 20 "../Peripherals/src/kf32f_basic_rtc.c" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_bkp.h" 1
-# 77 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_bkp.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_bkp.h" 1
+# 77 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_bkp.h"
 void BKP_Reset (void);
 void BKP_Write_And_Read_Enable (FunctionalState NewState);
 
@@ -806,8 +806,8 @@ void BKP_Pin_TAMP_INT_Enable (uint32_t PinSel, FunctionalState NewState);
 FlagStatus BKP_Get_Pin_TAMP_INT_Flag (uint32_t PinSel);
 void BKP_Clear_Pin_TAMP_INT_Flag (uint32_t PinSel);
 # 21 "../Peripherals/src/kf32f_basic_rtc.c" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_rtc.h" 1
-# 20 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_rtc.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_rtc.h" 1
+# 20 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_rtc.h"
 typedef struct
 {
     uint8_t m_Hours;
@@ -872,7 +872,7 @@ typedef struct
     uint32_t m_SecondsEnable;
 
 }RTC_AlarmTypeDef;
-# 290 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_rtc.h"
+# 290 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_rtc.h"
 void RTC_Reset (void);
 void RTC_Configuration (uint32_t TimeFormat,
                     RTC_InitTypeDef * rtcInitStruct);

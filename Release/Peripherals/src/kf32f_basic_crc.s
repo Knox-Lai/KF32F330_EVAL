@@ -1382,8 +1382,8 @@ CRC_SET_RSET:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_crc.c"
@@ -1752,8 +1752,8 @@ CRC_SET_RSET:
 	.string	"CRC_SET_INITVALUE"
 .LASF16:
 	.string	"TEMP"
-.LASF15:
-	.string	"IDATA"
+.LASF47:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF21:
 	.string	"m_InputReverse"
 .LASF33:
@@ -1782,6 +1782,8 @@ CRC_SET_RSET:
 	.string	"char"
 .LASF45:
 	.string	"GNU C 4.7.0"
+.LASF15:
+	.string	"IDATA"
 .LASF13:
 	.string	"INIT"
 .LASF24:
@@ -1808,8 +1810,6 @@ CRC_SET_RSET:
 	.string	"CRCInitStruct"
 .LASF51:
 	.string	"CRC_SET_RSET"
-.LASF47:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF23:
 	.string	"m_Data"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

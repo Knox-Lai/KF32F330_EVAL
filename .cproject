@@ -23,6 +23,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1495651257" name="C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.chipon32.chiponide.core.includepath.1773088911" name="Include Path(-I)" superClass="com.chipon32.chiponide.core.includepath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Driver}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Peripherals}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/BSP}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Middle}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Peripherals/inc}&quot;"/>

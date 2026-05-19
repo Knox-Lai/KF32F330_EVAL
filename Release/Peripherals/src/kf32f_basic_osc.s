@@ -7798,8 +7798,8 @@ OSC_Get_LP4MIF_INT_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_osc.c"
@@ -11212,8 +11212,6 @@ OSC_Get_LP4MIF_INT_Flag:
 	.string	"m_InputSource"
 .LASF55:
 	.string	"OSC_LFCK_Enable"
-.LASF115:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF42:
 	.string	"OSC_Struct_Init"
 .LASF57:
@@ -11368,6 +11366,8 @@ OSC_Get_LP4MIF_INT_Flag:
 	.string	"PLLDelay"
 .LASF52:
 	.string	"HFSource"
+.LASF115:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF37:
 	.string	"OSC_SCLK_Configuration"
 .LASF110:

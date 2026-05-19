@@ -1,13 +1,13 @@
 # 1 "../KF32_EVAL.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Release//"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Release//"
 # 1 "<command-line>"
 # 1 "../KF32_EVAL.c"
 # 1 "../KF32_EVAL.h" 1
 
 
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 20 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 20 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h" 1
 # 16 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h" 1
@@ -70,13 +70,13 @@ typedef unsigned long long uint_fast64_t;
 
 typedef long long intmax_t;
 typedef unsigned long long uintmax_t;
-# 21 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj/__Kungfu32_chipmodel_define.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 2
-# 22 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL/__Kungfu32_chipmodel_define.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 2
+# 22 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef enum
 {
     FALSE = 0,
@@ -200,7 +200,7 @@ typedef enum {
     INT_USART6 = 78,
     INT_USART7 = 79,
 } InterruptIndex;
-# 171 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 171 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPIO_MemMap {
     volatile const uint32_t PIR;
     volatile uint32_t POR;
@@ -214,7 +214,7 @@ typedef struct GPIO_MemMap {
                 uint32_t RESERVED;
     volatile uint32_t CTMDCTL[2];
 }GPIO_SFRmap;
-# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct OSC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -228,7 +228,7 @@ typedef struct OSC_MemMap {
 typedef struct PLL_MemMap {
    volatile uint32_t CTL;
 }PLL_SFRmap;
-# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct INT_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t EIE0;
@@ -271,7 +271,7 @@ typedef struct INT_MemMap {
     volatile uint32_t EINTSS1;
     volatile uint32_t CTL1;
 }INT_SFRmap;
-# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSCTL_MemMap {
     volatile uint32_t PSW;
     volatile uint32_t MCTL;
@@ -281,7 +281,7 @@ typedef struct SYSCTL_MemMap {
     volatile uint32_t RAMSPA;
     volatile uint32_t MEMCTL;
 }SYSCTL_SFRmap;
-# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ADC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -310,7 +310,7 @@ typedef struct ADC_Delay_MemMap
 {
     volatile uint32_t DELAY;
 }ADC_DELAY_SFRmap;
-# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DMA_MemMap {
     union {
         struct
@@ -399,14 +399,14 @@ typedef struct DMA_MemMap {
     volatile uint32_t LIFR;
     volatile uint32_t LIER;
 }DMA_SFRmap;
-# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSTICK_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t RELOAD;
     volatile uint32_t CV;
     volatile uint32_t CALI;
 }SYSTICK_SFRmap;
-# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -417,7 +417,7 @@ typedef struct BTIM_MemMap {
     volatile const uint32_t SR;
     volatile uint32_t SRIC;
 }BTIM_SFRmap;
-# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -442,7 +442,7 @@ typedef struct GPTIM_MemMap {
     volatile uint32_t CCPXCTL3;
     volatile uint32_t CCPXEGIF;
 }GPTIM_SFRmap, CCP_SFRmap;
-# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ATIM_MemMap {
     volatile uint32_t TXCNT;
     volatile uint32_t TZCNT;
@@ -487,7 +487,7 @@ typedef struct ATIM_MemMap {
     volatile uint32_t ECCPXSRIC;
     volatile uint32_t ECCPXCTL3;
 }ATIM_SFRmap, ECCP_SFRmap;
-# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct QEI_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -496,7 +496,7 @@ typedef struct QEI_MemMap {
     volatile uint32_t PRSC;
     volatile uint32_t DIER;
 }QEI_SFRmap;
-# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DAC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DAHD;
@@ -505,7 +505,7 @@ typedef struct DAC_MemMap {
                    uint32_t RESERVED;
     volatile uint32_t CAL;
 }DAC_SFRmap;
-# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CMP_MemMap {
     volatile uint32_t CTL;
 
@@ -514,7 +514,7 @@ typedef struct CMP_MemMap {
 
 
 }CMP_SFRmap;
-# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RTC_MemMap {
     volatile uint32_t CR;
     volatile uint32_t ALRA;
@@ -528,38 +528,38 @@ typedef struct RTC_MemMap {
     volatile uint32_t TMBR;
     volatile uint32_t DTBR;
 }RTC_SFRmap;
-# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct IWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t FD;
 }IWDT_SFRmap;
-# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct WWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t CNT;
 }WWDT_SFRmap;
-# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RST_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }RST_SFRmap;
-# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PCLK_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }PCLK_SFRmap;
-# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SPI_MemMap {
     volatile uint32_t BRGR;
     volatile uint32_t CTLR;
     volatile uint32_t BUFR;
     volatile uint32_t STR;
 }SPI_SFRmap;
-# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct I2C_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t SR;
@@ -572,7 +572,7 @@ typedef struct I2C_MemMap {
     volatile uint32_t IER;
     volatile uint32_t TPSR;
 }I2C_SFRmap;
-# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USART_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -585,7 +585,7 @@ typedef struct USART_MemMap {
     volatile uint32_t IER;
     volatile uint32_t ADM;
 }USART_SFRmap;
-# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USB_MemMap {
     volatile uint32_t UCON;
     volatile const uint32_t USTAT;
@@ -596,7 +596,7 @@ typedef struct USB_MemMap {
     volatile uint32_t UEP[8];
     volatile uint32_t UDB;
 }USB_SFRmap;
-# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CAN_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -615,7 +615,7 @@ typedef struct CAN_MemMap {
     volatile const uint32_t RXDATA2;
     volatile const uint32_t RXDATA3;
 }CAN_SFRmap;
-# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PM_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -627,14 +627,14 @@ typedef struct PM_MemMap {
     volatile uint32_t CAL1;
     volatile uint32_t CAL2;
 }PM_SFRmap;
-# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BKP_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t INT;
              uint32_t RESERVED[14];
     volatile uint32_t DATA[32];
 }BKP_SFRmap;
-# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct FLASH_MemMap {
     volatile uint32_t ISPCON0;
     volatile uint32_t ISPCON1;
@@ -654,7 +654,7 @@ typedef struct FLASH_MemMap {
     volatile uint32_t CSSTOP;
     volatile uint32_t CSRES[4];
 }FLASH_SFRmap;
-# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CRC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DATA;
@@ -665,7 +665,7 @@ typedef struct CRC_MemMap {
     volatile uint32_t IDATA;
     volatile uint32_t TEMP;
 }CRC_SFRmap;
-# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct AES_MemMap {
     volatile uint32_t CTL;
        uint32_t RESERVED1;
@@ -684,7 +684,7 @@ typedef struct AES_MemMap {
     volatile uint32_t OUTPUT2;
     volatile uint32_t OUTPUT3;
 }AES_SFRmap;
-# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct EXIC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -694,13 +694,13 @@ typedef struct EXIC_MemMap {
     volatile uint32_t READBUF;
 
 }EXIC_SFRmap;
-# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CFGL_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t IFR;
 }CFGL_SFRmap;
-# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 static inline uint32_t
 SFR_Config (uint32_t SfrMem, uint32_t SfrMask, uint32_t WriteVal)
 {
@@ -710,40 +710,40 @@ SFR_Config (uint32_t SfrMem, uint32_t SfrMask, uint32_t WriteVal)
 
 typedef enum
 {
-  LED3 = 0,
-  LED4 = 1,
-  LED5 = 2,
+  LED1 = 0,
+  LED2 = 1,
+  LED3 = 2,
 
-} Led_TypeDef;
+} led_typedef;
 
 typedef enum
 {
-  COM1 = 0,
-  COM2 = 1,
-  COM3 = 2,
-  COM4 = 3,
+  EVAL_COM1 = 0,
+  EVAL_COM2 = 1,
+  EVAL_COM3 = 2,
+  EVAL_COM4 = 3,
 
 } usart_typedef;
 # 80 "../KF32_EVAL.h"
 void kf_eval_usart_init(usart_typedef com_id);
 
-void kf_eval_led_init(Led_TypeDef Led);
-void kf_eval_led_on(Led_TypeDef Led);
-void kf_eval_led_off(Led_TypeDef Led);
-void kf_eval_led_toggle(Led_TypeDef Led);
+void kf_eval_led_init(led_typedef Led);
+void kf_eval_led_on(led_typedef Led);
+void kf_eval_led_off(led_typedef Led);
+void kf_eval_led_toggle(led_typedef Led);
 # 2 "../KF32_EVAL.c" 2
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h" 2
-# 33 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h" 2
+# 33 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
 typedef enum
 {
     GPIO_NOPULL = 0x00,
     GPIO_PULLUP = 0x01
 }GPIOPU_TypeDef, GPIOPD_TypeDef;
-# 47 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h"
+# 47 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
 typedef enum
 {
     GPIO_POD_PP = 0x00,
@@ -762,7 +762,7 @@ typedef enum
     GPIO_MODE_RMP = 0x02,
     GPIO_MODE_AN = 0x03
 }GPIOMode_TypeDef;
-# 73 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h"
+# 73 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
 typedef enum
 {
     GPIO_LOW_SPEED = 0,
@@ -803,7 +803,7 @@ typedef enum
     Bit_RESET = 0,
     Bit_SET = !Bit_RESET
 }BitAction;
-# 278 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_gpio.h"
+# 278 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
 void GPIO_Reset (GPIO_SFRmap* GPIOx);
 void GPIO_Configuration (GPIO_SFRmap* GPIOx, GPIO_InitTypeDef* gpioInitStruct);
 void GPIO_Struct_Init (GPIO_InitTypeDef* gpioInitStruct);
@@ -835,8 +835,8 @@ void GPIO_Toggle_Output_Data_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
 void GPIO_Pin_RMP_Config (GPIO_SFRmap* GPIOx,
                     uint16_t GpioPinNum, uint8_t PinRemap);
 # 4 "../KF32_EVAL.c" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_usart.h" 1
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_usart.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h" 1
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
 typedef struct
 {
     uint32_t m_Mode;
@@ -877,7 +877,7 @@ typedef struct
     uint8_t m_Egt;
 
 } U7816R_InitTypeDef;
-# 325 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/kf32f_basic_usart.h"
+# 325 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
 void USART_Reset (USART_SFRmap* USARTx);
 void USART_Configuration (USART_SFRmap* USARTx,
                     USART_InitTypeDef* usartInitStruct);
@@ -1065,24 +1065,21 @@ extern void printf_tiny (const char *fmt, ...);
 # 6 "../KF32_EVAL.c" 2
 
 
-GPIO_SFRmap* GPIO_PORT[3] = {((GPIO_SFRmap *) ((uint32_t)0x500001C0)), ((GPIO_SFRmap *) ((uint32_t)0x500001C0)), ((GPIO_SFRmap *) ((uint32_t)0x500000C0))};
-const uint16_t GPIO_PIN[3] = {((uint16_t)0x0020), ((uint16_t)0x0040), ((uint16_t)0x2000)};
+static USART_SFRmap* EVAL_COM_USART[4] = {((USART_SFRmap *) ((uint32_t)0x40000B00)), ((USART_SFRmap *) ((uint32_t)0x40001E80)), ((USART_SFRmap *) ((uint32_t)0x40000980)), ((USART_SFRmap *) ((uint32_t)0x40000A00))};
+static GPIO_SFRmap* EVAL_COM_GPIO_PORT[4] = {((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000080))};
 
-static USART_SFRmap* COM_USART[4] = {((USART_SFRmap *) ((uint32_t)0x40000B00)), ((USART_SFRmap *) ((uint32_t)0x40001E80)), ((USART_SFRmap *) ((uint32_t)0x40000980)), ((USART_SFRmap *) ((uint32_t)0x40000A00))};
-static GPIO_SFRmap* COM_GPIO_PORT[4] = {((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000000)), ((GPIO_SFRmap *) ((uint32_t)0x50000080))};
+static const uint16_t EVAL_COM_TX_PIN_NUM[4] = {((uint32_t)0x3), ((uint32_t)0x6), ((uint32_t)0x1), ((uint32_t)0xB)};
+static const uint16_t EVAL_COM_RX_PIN_NUM[4] = {((uint32_t)0x2), ((uint32_t)0x5), ((uint32_t)0x0), ((uint32_t)0xA)};
 
-static const uint16_t COM_TX_PIN_NUM[4] = {((uint32_t)0x3), ((uint32_t)0x6), ((uint32_t)0x1), ((uint32_t)0xB)};
-static const uint16_t COM_RX_PIN_NUM[4] = {((uint32_t)0x2), ((uint32_t)0x5), ((uint32_t)0x0), ((uint32_t)0xA)};
+static const uint8_t EVAL_COM_TX_PIN_RMP[4] = {((uint8_t)0x06), ((uint8_t)0x06), ((uint8_t)0x05), ((uint8_t)0x05)};
+static const uint8_t EVAL_COM_RX_PIN_RMP[4] = {((uint8_t)0x06), ((uint8_t)0x06), ((uint8_t)0x05), ((uint8_t)0x0B)};
 
-static const uint8_t COM_TX_PIN_RMP[4] = {((uint8_t)0x06), ((uint8_t)0x06), ((uint8_t)0x05), ((uint8_t)0x05)};
-static const uint8_t COM_RX_PIN_RMP[4] = {((uint8_t)0x06), ((uint8_t)0x06), ((uint8_t)0x05), ((uint8_t)0x0B)};
+static const uint16_t EVAL_COM_TX_PIN[4] = {((uint16_t)0x0008), ((uint16_t)0x0040), ((uint16_t)0x0002), ((uint16_t)0x0800)};
+static const uint16_t EVAL_COM_RX_PIN[4] = {((uint16_t)0x0004), ((uint16_t)0x0020), ((uint16_t)0x0001), ((uint16_t)0x0400)};
 
-static const uint16_t COM_TX_PIN[4] = {((uint16_t)0x0008), ((uint16_t)0x0040), ((uint16_t)0x0002), ((uint16_t)0x0800)};
-static const uint16_t COM_RX_PIN[4] = {((uint16_t)0x0004), ((uint16_t)0x0020), ((uint16_t)0x0001), ((uint16_t)0x0400)};
+static const uint32_t EVAL_COM_BAUD[4] = {115200, 115200, 115200, 115200};
 
-static const uint32_t COM_BAUD[4] = {115200, 115200, 115200, 115200};
-
-static const InterruptIndex COM_INT[4] = {INT_USART3, INT_USART5, INT_USART0, INT_USART1};
+static const InterruptIndex EVAL_COM_INT[4] = {INT_USART3, INT_USART5, INT_USART0, INT_USART1};
 
 
 
@@ -1096,13 +1093,13 @@ void kf_eval_usart_init(usart_typedef com_id)
         return;
     }
 
-    GPIO_Write_Mode_Bits(COM_GPIO_PORT[com_id], COM_TX_PIN[com_id], GPIO_MODE_RMP);
-    GPIO_Pin_RMP_Config(COM_GPIO_PORT[com_id], COM_TX_PIN_NUM[com_id], COM_TX_PIN_RMP[com_id]);
-    GPIO_Pin_Lock_Config(COM_GPIO_PORT[com_id], COM_TX_PIN[com_id], TRUE);
+    GPIO_Write_Mode_Bits(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_TX_PIN[com_id], GPIO_MODE_RMP);
+    GPIO_Pin_RMP_Config(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_TX_PIN_NUM[com_id], EVAL_COM_TX_PIN_RMP[com_id]);
+    GPIO_Pin_Lock_Config(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_TX_PIN[com_id], TRUE);
 
-    GPIO_Write_Mode_Bits(COM_GPIO_PORT[com_id], COM_RX_PIN[com_id], GPIO_MODE_RMP);
-    GPIO_Pin_RMP_Config(COM_GPIO_PORT[com_id], COM_RX_PIN_NUM[com_id], COM_RX_PIN_RMP[com_id]);
-    GPIO_Pin_Lock_Config(COM_GPIO_PORT[com_id], COM_RX_PIN[com_id], TRUE);
+    GPIO_Write_Mode_Bits(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_RX_PIN[com_id], GPIO_MODE_RMP);
+    GPIO_Pin_RMP_Config(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_RX_PIN_NUM[com_id], EVAL_COM_RX_PIN_RMP[com_id]);
+    GPIO_Pin_Lock_Config(EVAL_COM_GPIO_PORT[com_id], EVAL_COM_RX_PIN[com_id], TRUE);
 
     USART_InitTypeDef USART_InitStructure;
 
@@ -1112,28 +1109,37 @@ void kf_eval_usart_init(usart_typedef com_id)
     USART_InitStructure.m_WordLength = ((uint32_t)0<<(21));
     USART_InitStructure.m_StopBits = ((uint32_t)0<<(18));
     USART_InitStructure.m_BaudRateBRCKS = ((uint32_t)1<<(1));
-# 63 "../KF32_EVAL.c"
-    if (COM_BAUD[com_id] == 115200) {
+# 60 "../KF32_EVAL.c"
+    if (EVAL_COM_BAUD[com_id] == 115200) {
         USART_InitStructure.m_BaudRateInteger = 8;
         USART_InitStructure.m_BaudRateNumerator = 1;
         USART_InitStructure.m_BaudRateDenominator = 13;
-    } else if (COM_BAUD[com_id] == 9600) {
+    } else if (EVAL_COM_BAUD[com_id] == 9600) {
         USART_InitStructure.m_BaudRateInteger = 104;
         USART_InitStructure.m_BaudRateNumerator = 0;
         USART_InitStructure.m_BaudRateDenominator = 0;
     }
 
-    USART_Reset(COM_USART[com_id]);
-    USART_Configuration(COM_USART[com_id], &USART_InitStructure);
-    USART_Passageway_Select_Config(COM_USART[com_id], ((uint32_t)0<<(4)));
-    USART_Clear_Transmit_BUFR_INT_Flag(COM_USART[com_id]);
-    USART_RESHD_Enable(COM_USART[com_id], TRUE);
-    USART_Cmd(COM_USART[com_id], TRUE);
+    USART_Reset(EVAL_COM_USART[com_id]);
+    USART_Configuration(EVAL_COM_USART[com_id], &USART_InitStructure);
+    USART_Passageway_Select_Config(EVAL_COM_USART[com_id], ((uint32_t)0<<(4)));
+    USART_Clear_Transmit_BUFR_INT_Flag(EVAL_COM_USART[com_id]);
+    USART_RESHD_Enable(EVAL_COM_USART[com_id], TRUE);
+    USART_Cmd(EVAL_COM_USART[com_id], TRUE);
 
 
 }
-# 90 "../KF32_EVAL.c"
-void kf_eval_led_init(Led_TypeDef Led)
+
+GPIO_SFRmap* GPIO_PORT[3] = {((GPIO_SFRmap *) ((uint32_t)0x500001C0)), ((GPIO_SFRmap *) ((uint32_t)0x500001C0)), ((GPIO_SFRmap *) ((uint32_t)0x500000C0))};
+const uint16_t GPIO_PIN[3] = {((uint16_t)0x0020), ((uint16_t)0x0040), ((uint16_t)0x2000)};
+
+
+
+
+
+
+
+void kf_eval_led_init(led_typedef Led)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_Struct_Init(&GPIO_InitStructure);
@@ -1146,8 +1152,8 @@ void kf_eval_led_init(Led_TypeDef Led)
  GPIO_InitStructure.m_PullDown = GPIO_NOPULL;
     GPIO_Configuration(GPIO_PORT[Led], &GPIO_InitStructure);
 }
-# 112 "../KF32_EVAL.c"
-void kf_eval_led_on(Led_TypeDef Led)
+# 111 "../KF32_EVAL.c"
+void kf_eval_led_on(led_typedef Led)
 {
     GPIO_Set_Output_Data_Bits(GPIO_PORT[Led],GPIO_PIN[Led],Bit_SET);
 }
@@ -1157,12 +1163,12 @@ void kf_eval_led_on(Led_TypeDef Led)
 
 
 
-void kf_eval_led_off(Led_TypeDef Led)
+void kf_eval_led_off(led_typedef Led)
 {
  GPIO_Set_Output_Data_Bits(GPIO_PORT[Led],GPIO_PIN[Led],Bit_RESET);
 }
 
-void kf_eval_led_toggle(Led_TypeDef Led)
+void kf_eval_led_toggle(led_typedef Led)
 {
  GPIO_Toggle_Output_Data_Config(GPIO_PORT[Led], GPIO_PIN[Led]);
 }

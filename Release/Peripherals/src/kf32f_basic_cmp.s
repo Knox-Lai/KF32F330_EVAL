@@ -5002,8 +5002,8 @@ CMP_FLTINSEL_Select:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_cmp.c"
@@ -7232,8 +7232,6 @@ CMP_FLTINSEL_Select:
 	.string	"GNU C 4.7.0"
 .LASF23:
 	.string	"m_FilterEnable"
-.LASF78:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF46:
 	.string	"CMP1_OUTPUT_POL_SELECT"
 .LASF22:
@@ -7268,6 +7266,8 @@ CMP_FLTINSEL_Select:
 	.string	"CMP_HALLMODE_Select"
 .LASF72:
 	.string	"CMP3_INT_Enable"
+.LASF78:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF77:
 	.string	"../Peripherals/src/kf32f_basic_cmp.c"
 .LASF24:

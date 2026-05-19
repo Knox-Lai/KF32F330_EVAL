@@ -9821,8 +9821,8 @@ read_data:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_flash.c"
@@ -13245,8 +13245,8 @@ read_data:
 	.string	"m_WriteSize"
 .LASF0:
 	.string	"unsigned int"
-.LASF11:
-	.string	"FunctionalState"
+.LASF128:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF98:
 	.string	"FLASH_Clear_CFG_Error_Flag_RAM"
 .LASF95:
@@ -13361,8 +13361,6 @@ read_data:
 	.string	"m_Mode"
 .LASF75:
 	.string	"FLASH_Zone_Config"
-.LASF128:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF85:
 	.string	"FLASH_Half_Page_Write_Size_Config_RAM"
 .LASF24:
@@ -13379,6 +13377,8 @@ read_data:
 	.string	"Read_Soft_Device_ID4"
 .LASF105:
 	.string	"FLASH_Wipe_Configuration_RAM"
+.LASF11:
+	.string	"FunctionalState"
 .LASF113:
 	.string	"FLASH_Program_Configuration"
 .LASF76:

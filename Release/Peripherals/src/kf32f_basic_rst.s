@@ -776,8 +776,8 @@ RST_CTL3_Peripheral_Reset_Enable:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_rst.c"
@@ -994,6 +994,8 @@ RST_CTL3_Peripheral_Reset_Enable:
 	.string	"short unsigned int"
 .LASF8:
 	.string	"FALSE"
+.LASF28:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF24:
 	.string	"RST_CTL2_bit"
 .LASF0:
@@ -1026,6 +1028,4 @@ RST_CTL3_Peripheral_Reset_Enable:
 	.string	"uint32_t"
 .LASF2:
 	.string	"signed char"
-.LASF28:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

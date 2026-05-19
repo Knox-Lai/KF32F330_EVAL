@@ -172,7 +172,7 @@ _config_Mode_Set:
 .LASF3:
 	.string	"../config/chip_mode_protect_config.c"
 .LASF4:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF1:
 	.string	"_config_Protect_Set"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

@@ -6520,8 +6520,8 @@ PM_LPR_Module_Config:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_pm.c"
@@ -9825,8 +9825,8 @@ PM_LPR_Module_Config:
 	.string	"unsigned int"
 .LASF108:
 	.string	"PM_INTLF_Bias_Current_Config"
-.LASF11:
-	.string	"FunctionalState"
+.LASF122:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF17:
 	.string	"STA0"
 .LASF18:
@@ -9953,8 +9953,6 @@ PM_LPR_Module_Config:
 	.string	"PM_LP_Bias_Calibration_Config"
 .LASF70:
 	.string	"PM_PLL1LDO_Output_Buffer_Enable"
-.LASF122:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF98:
 	.string	"PM_Get_LPR_Status"
 .LASF61:
@@ -9963,6 +9961,8 @@ PM_LPR_Module_Config:
 	.string	"SFR_Config"
 .LASF45:
 	.string	"PM_Peripheral_IO_Port_Config"
+.LASF11:
+	.string	"FunctionalState"
 .LASF15:
 	.string	"CTL0"
 .LASF16:

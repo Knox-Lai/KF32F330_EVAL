@@ -154,14 +154,14 @@
 	.debug_str$scode_local_5:
 .LASF0:
 	.string	"unsigned int"
-.LASF11:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF2:
 	.string	"signed char"
 .LASF9:
 	.string	"GNU C 4.7.0"
 .LASF4:
 	.string	"short int"
+.LASF7:
+	.string	"char"
 .LASF6:
 	.string	"long long unsigned int"
 .LASF10:
@@ -170,8 +170,8 @@
 	.string	"unsigned char"
 .LASF8:
 	.string	"sizetype"
-.LASF7:
-	.string	"char"
+.LASF11:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF1:
 	.string	"short unsigned int"
 .LASF5:

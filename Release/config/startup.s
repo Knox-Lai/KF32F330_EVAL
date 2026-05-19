@@ -435,8 +435,8 @@ startup:
 	.debug_str$scode_local_8:
 .LASF2:
 	.string	"unsigned int"
-.LASF9:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
+.LASF1:
+	.string	"unsigned char"
 .LASF7:
 	.string	"GNU C 4.7.0"
 .LASF0:
@@ -445,16 +445,16 @@ startup:
 	.string	"startup"
 .LASF3:
 	.string	"__text_end__"
-.LASF1:
-	.string	"unsigned char"
+.LASF11:
+	.string	"begin"
 .LASF5:
 	.string	"__bss_end__"
 .LASF8:
 	.string	"../config/startup.c"
-.LASF11:
-	.string	"begin"
 .LASF6:
 	.string	"__data_start__"
+.LASF9:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF4:
 	.string	"__bss_start__"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

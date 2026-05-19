@@ -776,8 +776,8 @@ PCLK_CTL3_Peripheral_Clock_Enable:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_pclk.c"
@@ -996,6 +996,8 @@ PCLK_CTL3_Peripheral_Clock_Enable:
 	.string	"FALSE"
 .LASF23:
 	.string	"PCLK_CTL2_Peripheral_Clock_Enable"
+.LASF28:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF17:
 	.string	"PCLK_SFRmap"
 .LASF0:
@@ -1026,6 +1028,4 @@ PCLK_CTL3_Peripheral_Clock_Enable:
 	.string	"PCLK_MemMap"
 .LASF2:
 	.string	"signed char"
-.LASF28:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

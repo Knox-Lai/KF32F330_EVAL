@@ -1,7 +1,8 @@
 #ifndef __BSP_USART_H
 #define __BSP_USART_H
 
-#include "KF32F_BASIC.h"
+#include <stdint.h>
+
 
 typedef enum
 {

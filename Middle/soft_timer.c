@@ -26,13 +26,7 @@ my_date_t cur_date;
 //------------------------------------------------------------------------------
 // private function
 //------------------------------------------------------------------------------
-void systick_timer_init(void)
-{
-	SYSTICK_Configuration(SYSTICK_SYS_CLOCK_DIV_1, TRUE, SystemCoreClock/1000);
-    INT_Interrupt_Enable(INT_SysTick, TRUE);
-    INT_All_Enable(TRUE);
-    SYSTICK_Cmd(TRUE);
-}
+
 
 /**
  * @brief : 获取当前软件定时器tick数

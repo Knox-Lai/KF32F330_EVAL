@@ -3,9 +3,8 @@
 #ifndef __SOFT_TIMER_H
 #define __SOFT_TIMER_H
 
-#include "system_init.h"
+#include <stdint.h>
 #include <stdio.h>
-#include <string.h>
 //------------------------------------------------------------------------------
 // define
 //------------------------------------------------------------------------------
@@ -62,7 +61,6 @@ typedef struct
 //------------------------------------------------------------------------------
 uint32_t softtimer_tick_get(void);
 void softtimer_tick_cnt_up(void);
-void systick_timer_init(void);
 
 uint32_t SOFTTIMER_getTimeoutValue(uint8_t timerIndex);
 void SOFTTIMER_setTimeoutValue(uint8_t timerIndex,uint32_t newValue);

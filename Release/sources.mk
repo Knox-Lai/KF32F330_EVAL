@@ -30,5 +30,6 @@ Driver \
 . \
 Middle \
 Peripherals/src \
+Peripherals \
 config \
 

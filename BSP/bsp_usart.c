@@ -2,7 +2,7 @@
  * @Author        Knox.Lai Knox.Lai@WACLighting.COM.CN
  * @Date          2026-04-17 13:43:32
  * @LastEditors   Knox.Lai
- * @LastEditTime  2026-04-24 16:25:14
+ * @LastEditTime  2026-05-12 14:31:08
  * @FilePath      \\KF32F330_EVAL\\BSP\\bsp_usart.c
  * @Description   
  */
@@ -46,10 +46,12 @@ void bsp_usart_init(usart_typedef_t com_id)
 
     GPIO_Write_Mode_Bits(COM_GPIO_PORT[com_id], COM_TX_PIN[com_id], GPIO_MODE_RMP);
     GPIO_Pin_RMP_Config(COM_GPIO_PORT[com_id], COM_TX_PIN_NUM[com_id], COM_TX_PIN_RMP[com_id]);
+    GPIO_Pull_Up_Enable (COM_GPIO_PORT[com_id], COM_TX_PIN[com_id], TRUE);
     GPIO_Pin_Lock_Config(COM_GPIO_PORT[com_id], COM_TX_PIN[com_id], TRUE);
 
     GPIO_Write_Mode_Bits(COM_GPIO_PORT[com_id], COM_RX_PIN[com_id], GPIO_MODE_RMP);
     GPIO_Pin_RMP_Config(COM_GPIO_PORT[com_id], COM_RX_PIN_NUM[com_id], COM_RX_PIN_RMP[com_id]);
+    GPIO_Pull_Up_Enable (COM_GPIO_PORT[com_id], COM_RX_PIN[com_id], TRUE);
     GPIO_Pin_Lock_Config(COM_GPIO_PORT[com_id], COM_RX_PIN[com_id], TRUE);
 
     USART_InitTypeDef USART_InitStructure;

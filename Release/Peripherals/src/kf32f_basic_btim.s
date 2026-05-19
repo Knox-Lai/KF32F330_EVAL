@@ -5235,8 +5235,8 @@ BTIM_Clear_Updata_INT_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_btim.c"
@@ -7292,8 +7292,6 @@ BTIM_Clear_Updata_INT_Flag:
 	.string	"BTIM_Slave_Mode_Config"
 .LASF95:
 	.string	"GNU C 4.7.0"
-.LASF97:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF33:
 	.string	"BTIM_InitTypeDef"
 .LASF20:
@@ -7332,6 +7330,8 @@ BTIM_Clear_Updata_INT_Flag:
 	.string	"m_EXPulseSync"
 .LASF85:
 	.string	"BTIM_Get_Overflow_INT_Status"
+.LASF97:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF83:
 	.string	"BTIM_Get_Trigger_DMA_INT_Status"
 .LASF56:

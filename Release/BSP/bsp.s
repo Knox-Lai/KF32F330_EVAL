@@ -80,28 +80,28 @@ bsp_init:
 	.byte	0x1
 	.byte	0x8
 	.long	.LASF7
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x7
-	.long	.LASF8
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x2
-	.byte	0x7
-	.long	0x90
+	.byte	0x8
+	.long	0x89
 	.uleb128 0x5
-	.long	.LASF9
+	.long	.LASF8
 	.sleb128 0
 	.uleb128 0x5
-	.long	.LASF10
+	.long	.LASF9
 	.sleb128 1
 	.uleb128 0x5
-	.long	.LASF11
+	.long	.LASF10
 	.sleb128 2
 	.uleb128 0x5
-	.long	.LASF12
+	.long	.LASF11
 	.sleb128 3
 	.byte	0
+	.uleb128 0x3
+	.byte	0x4
+	.byte	0x7
+	.long	.LASF12
 	.uleb128 0x6
 	.byte	0x1
 	.long	.LASF16
@@ -323,21 +323,21 @@ bsp_init:
 	.string	"long long int"
 .LASF0:
 	.string	"unsigned int"
-.LASF15:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF13:
 	.string	"GNU C 4.7.0"
 .LASF14:
 	.string	"../BSP/bsp.c"
+.LASF15:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF9:
+.LASF8:
 	.string	"COM1"
-.LASF10:
+.LASF9:
 	.string	"COM2"
-.LASF11:
+.LASF10:
 	.string	"COM3"
-.LASF12:
+.LASF11:
 	.string	"COM4"
 .LASF3:
 	.string	"unsigned char"
@@ -351,6 +351,6 @@ bsp_init:
 	.string	"short int"
 .LASF16:
 	.string	"bsp_init"
-.LASF8:
+.LASF12:
 	.string	"sizetype"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

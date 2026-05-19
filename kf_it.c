@@ -9,7 +9,7 @@
   *********************************************************************
   */
 #include "soft_timer.h"
-#include "delay.h"
+#include "bsp_systick.h"
 #include "kf32f_basic_int.h"
 //*****************************************************************************************
 //                                 NMI中断函数
@@ -56,7 +56,7 @@ void __attribute__((interrupt)) _SoftSV_exception (void)
 //*****************************************************************************************	
 void __attribute__((interrupt)) _SysTick_exception (void)
 {
-    delay_tick_cnt_up();
+    systick_tick_cnt_up();
     softtimer_tick_cnt_up();
     INT_Clear_Interrupt_Flag(INT_SysTick);
 	

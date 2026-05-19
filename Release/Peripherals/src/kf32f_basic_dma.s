@@ -5236,8 +5236,8 @@ DMA_Finish_Transfer_INT_Enable:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_dma.c"
@@ -6607,8 +6607,8 @@ DMA_Finish_Transfer_INT_Enable:
 	.string	"m_Priority"
 .LASF0:
 	.string	"unsigned int"
-.LASF13:
-	.string	"FunctionalState"
+.LASF133:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF107:
 	.string	"DMA_Memory_addr_increase_Enable"
 .LASF32:
@@ -6717,12 +6717,10 @@ DMA_Finish_Transfer_INT_Enable:
 	.string	"long long int"
 .LASF80:
 	.string	"m_MemoryInc"
-.LASF92:
-	.string	"dmaInitStruct"
 .LASF86:
 	.string	"SfrMem"
-.LASF133:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
+.LASF92:
+	.string	"dmaInitStruct"
 .LASF132:
 	.string	"../Peripherals/src/kf32f_basic_dma.c"
 .LASF122:
@@ -6731,6 +6729,8 @@ DMA_Finish_Transfer_INT_Enable:
 	.string	"SFR_Config"
 .LASF115:
 	.string	"DMA_Peripheral_Start_Address_Config"
+.LASF13:
+	.string	"FunctionalState"
 .LASF128:
 	.string	"DMA_Get_Finish_Transfer_INT_Flag"
 .LASF109:

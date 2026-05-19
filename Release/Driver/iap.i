@@ -1,13 +1,16 @@
 # 1 "../Driver/iap.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Release//"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Release//"
 # 1 "<command-line>"
 # 1 "../Driver/iap.c"
-# 1 "../Driver/iap.h" 1
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 1
 
 
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 20 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_delay.h" 1
+
+
+
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h" 1
 # 16 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h" 1
@@ -70,13 +73,88 @@ typedef unsigned long long uint_fast64_t;
 
 typedef long long intmax_t;
 typedef unsigned long long uintmax_t;
-# 21 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj/__Kungfu32_chipmodel_define.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_Config.h" 2
-# 22 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 5 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_delay.h" 2
+
+
+uint32_t delay_tick_get(void);
+void delay_tick_cnt_up(void);
+void delay_ms_timer(volatile uint32_t nms);
+void delay_ms_for(volatile uint32_t nms);
+void delay_us_systick(unsigned int nus);
+void delay_ms_systick(unsigned int nms);
+# 6 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_usart.h" 1
+
+
+
+
+
+
+typedef enum
+{
+  COM1 = 0,
+  COM2 = 1,
+  COM3 = 2,
+  COM4 = 3,
+
+} usart_typedef_t;
+# 62 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_usart.h"
+void bsp_usart_init(usart_typedef_t com_id);
+# 7 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_flash.h" 1
+# 65 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_flash.h"
+void flash_erase_page(uint32_t address);
+void flash_erase_range(uint32_t start_addr, uint32_t end_addr);
+
+
+uint32_t flash_read_byte(uint32_t address,uint8_t *p_FlashBuffer);
+uint32_t flash_read_halfword(uint32_t address,uint16_t *p_FlashBuffer);
+uint32_t flash_read_word(uint32_t address,uint32_t *p_FlashBuffer);
+void flash_read_nbyte(uint32_t Address, uint8_t *Buffers, uint32_t Length);
+void flash_read_multiple_word(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+
+void flash_write_byte(uint32_t address,uint8_t p_FlashBuffer);
+void flash_write_nbyte(uint32_t address,uint8_t *p_FlashBuffer,uint32_t length);
+void flash_write_halfword(uint32_t address,uint16_t p_FlashBuffer);
+void flash_write_word(uint32_t address,uint32_t p_FlashBuffer);
+void flash_write_doubleword(uint32_t address,uint32_t *p_FlashBuffer);
+void flash_write_half_page(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+void flash_write_page(uint32_t address,uint32_t *p_FlashBuffer,uint8_t length);
+
+
+void FLASH_WriteCFG_ONE(uint32_t address,uint32_t *p_FlashBuffer);
+void FLASH_HALFPAGE_WRITECFG_fun(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+void FLASH_PageWrite_CFG_fun(uint32_t address,uint32_t *p_FlashBuffer,uint8_t length);
+# 8 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_systick.h" 1
+
+
+
+
+
+
+extern uint8_t fac_us;
+extern uint16_t fac_ms;
+void systick_tick_cnt_up(void);
+uint32_t systick_tick_get(void);
+void systick_timer_init(uint32_t Reload);
+void systick_delay_init(void);
+# 9 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+
+
+
+
+
+
+
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL/__Kungfu32_chipmodel_define.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 2
+# 22 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef enum
 {
     FALSE = 0,
@@ -200,7 +278,7 @@ typedef enum {
     INT_USART6 = 78,
     INT_USART7 = 79,
 } InterruptIndex;
-# 171 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 171 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPIO_MemMap {
     volatile const uint32_t PIR;
     volatile uint32_t POR;
@@ -214,7 +292,7 @@ typedef struct GPIO_MemMap {
                 uint32_t RESERVED;
     volatile uint32_t CTMDCTL[2];
 }GPIO_SFRmap;
-# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct OSC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -228,7 +306,7 @@ typedef struct OSC_MemMap {
 typedef struct PLL_MemMap {
    volatile uint32_t CTL;
 }PLL_SFRmap;
-# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct INT_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t EIE0;
@@ -271,7 +349,7 @@ typedef struct INT_MemMap {
     volatile uint32_t EINTSS1;
     volatile uint32_t CTL1;
 }INT_SFRmap;
-# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSCTL_MemMap {
     volatile uint32_t PSW;
     volatile uint32_t MCTL;
@@ -281,7 +359,7 @@ typedef struct SYSCTL_MemMap {
     volatile uint32_t RAMSPA;
     volatile uint32_t MEMCTL;
 }SYSCTL_SFRmap;
-# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ADC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -310,7 +388,7 @@ typedef struct ADC_Delay_MemMap
 {
     volatile uint32_t DELAY;
 }ADC_DELAY_SFRmap;
-# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DMA_MemMap {
     union {
         struct
@@ -399,14 +477,14 @@ typedef struct DMA_MemMap {
     volatile uint32_t LIFR;
     volatile uint32_t LIER;
 }DMA_SFRmap;
-# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSTICK_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t RELOAD;
     volatile uint32_t CV;
     volatile uint32_t CALI;
 }SYSTICK_SFRmap;
-# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -417,7 +495,7 @@ typedef struct BTIM_MemMap {
     volatile const uint32_t SR;
     volatile uint32_t SRIC;
 }BTIM_SFRmap;
-# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -442,7 +520,7 @@ typedef struct GPTIM_MemMap {
     volatile uint32_t CCPXCTL3;
     volatile uint32_t CCPXEGIF;
 }GPTIM_SFRmap, CCP_SFRmap;
-# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ATIM_MemMap {
     volatile uint32_t TXCNT;
     volatile uint32_t TZCNT;
@@ -487,7 +565,7 @@ typedef struct ATIM_MemMap {
     volatile uint32_t ECCPXSRIC;
     volatile uint32_t ECCPXCTL3;
 }ATIM_SFRmap, ECCP_SFRmap;
-# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct QEI_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -496,7 +574,7 @@ typedef struct QEI_MemMap {
     volatile uint32_t PRSC;
     volatile uint32_t DIER;
 }QEI_SFRmap;
-# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DAC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DAHD;
@@ -505,7 +583,7 @@ typedef struct DAC_MemMap {
                    uint32_t RESERVED;
     volatile uint32_t CAL;
 }DAC_SFRmap;
-# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CMP_MemMap {
     volatile uint32_t CTL;
 
@@ -514,7 +592,7 @@ typedef struct CMP_MemMap {
 
 
 }CMP_SFRmap;
-# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RTC_MemMap {
     volatile uint32_t CR;
     volatile uint32_t ALRA;
@@ -528,38 +606,38 @@ typedef struct RTC_MemMap {
     volatile uint32_t TMBR;
     volatile uint32_t DTBR;
 }RTC_SFRmap;
-# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct IWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t FD;
 }IWDT_SFRmap;
-# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct WWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t CNT;
 }WWDT_SFRmap;
-# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RST_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }RST_SFRmap;
-# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PCLK_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }PCLK_SFRmap;
-# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SPI_MemMap {
     volatile uint32_t BRGR;
     volatile uint32_t CTLR;
     volatile uint32_t BUFR;
     volatile uint32_t STR;
 }SPI_SFRmap;
-# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct I2C_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t SR;
@@ -572,7 +650,7 @@ typedef struct I2C_MemMap {
     volatile uint32_t IER;
     volatile uint32_t TPSR;
 }I2C_SFRmap;
-# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USART_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -585,7 +663,7 @@ typedef struct USART_MemMap {
     volatile uint32_t IER;
     volatile uint32_t ADM;
 }USART_SFRmap;
-# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USB_MemMap {
     volatile uint32_t UCON;
     volatile const uint32_t USTAT;
@@ -596,7 +674,7 @@ typedef struct USB_MemMap {
     volatile uint32_t UEP[8];
     volatile uint32_t UDB;
 }USB_SFRmap;
-# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CAN_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -615,7 +693,7 @@ typedef struct CAN_MemMap {
     volatile const uint32_t RXDATA2;
     volatile const uint32_t RXDATA3;
 }CAN_SFRmap;
-# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PM_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -627,14 +705,14 @@ typedef struct PM_MemMap {
     volatile uint32_t CAL1;
     volatile uint32_t CAL2;
 }PM_SFRmap;
-# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BKP_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t INT;
              uint32_t RESERVED[14];
     volatile uint32_t DATA[32];
 }BKP_SFRmap;
-# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct FLASH_MemMap {
     volatile uint32_t ISPCON0;
     volatile uint32_t ISPCON1;
@@ -654,7 +732,7 @@ typedef struct FLASH_MemMap {
     volatile uint32_t CSSTOP;
     volatile uint32_t CSRES[4];
 }FLASH_SFRmap;
-# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CRC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DATA;
@@ -665,7 +743,7 @@ typedef struct CRC_MemMap {
     volatile uint32_t IDATA;
     volatile uint32_t TEMP;
 }CRC_SFRmap;
-# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct AES_MemMap {
     volatile uint32_t CTL;
        uint32_t RESERVED1;
@@ -684,7 +762,7 @@ typedef struct AES_MemMap {
     volatile uint32_t OUTPUT2;
     volatile uint32_t OUTPUT3;
 }AES_SFRmap;
-# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct EXIC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -694,30 +772,740 @@ typedef struct EXIC_MemMap {
     volatile uint32_t READBUF;
 
 }EXIC_SFRmap;
-# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CFGL_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t IFR;
 }CFGL_SFRmap;
-# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\inc/KF32F_BASIC.h"
+# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 static inline uint32_t
 SFR_Config (uint32_t SfrMem, uint32_t SfrMask, uint32_t WriteVal)
 {
     return ((SfrMem & SfrMask) | (WriteVal));
 }
-# 5 "../Driver/iap.h" 2
+# 17 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
+typedef struct
+{
+    uint32_t m_Mode;
+
+    uint32_t m_HalfDuplexClkSource;
+    uint32_t m_TransferDir;
+    uint32_t m_WordLength;
+    uint32_t m_StopBits;
+    uint32_t m_Bit9SEL;
+    uint32_t m_Parity;
+    uint32_t m_ReceiveOrder;
+    uint32_t m_TransmitOrder;
+    uint32_t m_BRAutoDetect;
+    uint32_t m_HardwareFlowControl;
+    uint16_t m_BaudRateBRCKS;
+    uint16_t m_BaudRateInteger;
+    uint16_t m_BaudRateNumerator;
+    uint16_t m_BaudRateDenominator;
+} USART_InitTypeDef;
+
 
 
 
 typedef struct
 {
-    uint32_t fileRecChecksum;
-    uint32_t fileChecksum;
-    uint32_t fileBytesNum;
+    uint32_t m_ErrorSignal;
 
-    uint32_t bytesCount;
-    uint16_t lastPktIndex;
-    uint8_t firmwareIdFlag;
-}iap_handle_t;
+    uint32_t m_PassagewaySelect;
+
+    uint32_t m_TransmitRepeat;
+
+    uint32_t m_ReceiveRepeat;
+
+    FunctionalState m_Clkout;
+
+    uint8_t m_ClkDiv;
+
+    uint8_t m_Egt;
+
+} U7816R_InitTypeDef;
+# 325 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
+void USART_Reset (USART_SFRmap* USARTx);
+void USART_Configuration (USART_SFRmap* USARTx,
+                    USART_InitTypeDef* usartInitStruct);
+void USART_U7816R_Configuration (USART_SFRmap* USARTx,
+                    U7816R_InitTypeDef* usartInitStruct);
+void USART_Struct_Init(USART_InitTypeDef* usartInitStruct);
+void USART_U7816R_Struct_Init(U7816R_InitTypeDef* usartInitStruct);
+
+void USART_Cmd (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_BaudRate_Clock_Config(USART_SFRmap* USARTx, uint32_t CLK);
+void USART_HalfDuplex_ClockPolarity_Config(USART_SFRmap* USARTx,
+                    uint32_t NewState);
+void USART_Transmit_Order_Config (USART_SFRmap* USARTx, uint32_t NewState);
+void USART_Receive_Order_Config (USART_SFRmap* USARTx, uint32_t NewState);
+void USART_Infrare_Detector_Voltage_Config (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_WeakUP_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Clock_Source_Config(USART_SFRmap* USARTx, uint32_t ClockSource);
+void USART_Address_Detection_Enable(USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Auto_BaudRate_Detection_Enable(USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Send_Blank_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_SYN_Choice_Config(USART_SFRmap* USARTx, uint32_t NewMode);
+void USART_Transmit_Data_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Receive_Data_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_STOP_Word_Config(USART_SFRmap* USARTx, uint32_t NewLength);
+void USART_Transmit_9Word_Select_Config (USART_SFRmap* USARTx,
+                    uint32_t NewState);
+void USART_Parity_Select_Config(USART_SFRmap* USARTx, uint32_t NewState);
+void USART_9Data_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_CTS_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_RTS_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Infrare_Detector_Enable(USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Singlet_Line_Mode_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_BaudRate_Integer_Config(USART_SFRmap* USARTx, uint16_t DIV);
+void USART_BaudRate_Decimal1_Config(USART_SFRmap* USARTx, uint32_t DIV);
+void USART_BaudRate_Decimal2_Config(USART_SFRmap* USARTx, uint32_t DIV);
+void USART_SendData(USART_SFRmap* USARTx, uint8_t Data);
+void USART_TransmitData(USART_SFRmap* USARTx, uint8_t Data);
+uint32_t USART_ReceiveData(USART_SFRmap* USARTx);
+void USART_Address_Match_Config(USART_SFRmap* USARTx, uint8_t DIV);
+void USART_Send_Idle_Frame_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Receive_Idle_Frame_Config(USART_SFRmap* USARTx, FunctionalState NewState);
+
+
+void USART_7816_Cmd(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_7816_CLKOUT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_7816_Error_Signal_Config (USART_SFRmap* USARTx,
+                    uint32_t ERRORSIGNAL);
+void USART_Passageway_Select_Config(USART_SFRmap* USARTx, uint32_t NewState);
+void USART_BGT_Config(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Transmit_Repeat_Enable(USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Receive_Repeat_Enable(USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Transmit_Repeat_Times_Config(USART_SFRmap* USARTx, uint32_t SELECT);
+void USART_Receive_Repeat_Times_Config(USART_SFRmap* USARTx, uint32_t SELECT);
+void USART_7816_CLKDIV_Config (USART_SFRmap* USARTx, uint8_t DIV);
+void USART_7816_EGT_Config(USART_SFRmap* USARTx, uint8_t EGT);
+void USART_7816_Resend_Mode_Select(USART_SFRmap* USARTx, FunctionalState NewState);
+
+
+void USART_Receive_Overflow_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Parity_ERROR_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Frame_ERROE_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Blank_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Auto_BaudRate_TimeOver_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_WeakUP_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Transmit_ERROR_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Receive_ERROR_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_CTS_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_RDR_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_TFE_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_TXE_INT_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_Receive_DMA_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_Transmit_DMA_INT_Enable (USART_SFRmap* USARTx,
+                    FunctionalState NewState);
+void USART_IDLE_INT_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+void USART_UADM_INT_Enable(USART_SFRmap* USARTx, FunctionalState NewState);
+FlagStatus USART_Get_Receive_Overflow_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Parity_ERROR_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Frame_ERROR_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Blank_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Auto_Baudrate_TimeOver_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_WeakUP_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_7816Transmit_ERROR_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_7816Receive_ERROR_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_CTS_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Receive_BUFR_Ready_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Transmit_BUFR_Empty_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Transmitter_Empty_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Receive_Frame_Idel_Flag(USART_SFRmap* USARTx);
+void USART_Clear_Receive_Overflow_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Parity_ERROR_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Frame_ERROR_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Blank_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Auto_BaudRate_TimeOver_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_WeakUP_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Transmit_ERROR_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Receive_ERROR_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_CTS_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_UADM_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_IDLE_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Receive_BUFR_INT_Flag (USART_SFRmap* USARTx);
+void USART_Clear_Transmit_BUFR_INT_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_WUEN_Flag (USART_SFRmap* USARTx);
+FlagStatus USART_Get_Auto_BaudRate_Detection_Flag(USART_SFRmap* USARTx);
+void USART_RESHD_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
+# 18 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h" 1
+# 24 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h"
+typedef struct
+{
+    uint32_t m_Line;
+
+    FunctionalState m_Mask;
+
+    FunctionalState m_Rise;
+
+    FunctionalState m_Fall;
+
+    uint32_t m_Source;
+
+} EINT_InitTypeDef;
+# 143 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h"
+uint8_t INT_Get_Interrupt_Action (void);
+uint8_t INT_Get_Priority_Pending_Action (void);
+void INT_Priority_Base (uint8_t PriBase);
+uint8_t INT_Get_Priority_Base (void);
+void INT_Stack_Align_Config (uint32_t StackAlign);
+void INT_Fault_Masking_Config (FunctionalState NewState);
+FlagStatus INT_Get_Pre_Empty (void);
+FlagStatus INT_Get_Pending_Flag (void);
+void INT_Priority_Group_Config (uint32_t PriorityGroup);
+uint32_t INT_Get_Priority_Group (void);
+void INT_All_Enable (FunctionalState NewState);
+void INT_Interrupt_Enable (InterruptIndex Peripheral,
+                    FunctionalState NewState);
+void INT_Set_Systick_Flag (void);
+void INT_Set_PendSV_Flag (void);
+FlagStatus INT_Get_Interrupt_Flag (InterruptIndex Peripheral);
+void INT_Clear_Interrupt_Flag (InterruptIndex Peripheral);
+void INT_Interrupt_Priority_Config (InterruptIndex Peripheral,
+                    uint32_t Preemption, uint32_t SubPriority);
+void INT_Set_Interrupt_Priority(InterruptIndex Peripheral, uint32_t Priority);
+void INT_Stack_Delay_Enable (uint8_t IntDelay);
+void INT_Vector_Offset_Config (uint32_t VectorOffset);
+
+void INT_External_Configuration (EINT_InitTypeDef* eintInitStruct);
+void INT_External_Struct_Init (EINT_InitTypeDef* eintInitStruct);
+
+void INT_External_Mask_Enable (uint32_t EintMask, FunctionalState NewState);
+void INT_External_Rise_Enable (uint32_t EintMask, FunctionalState NewState);
+void INT_External_Fall_Enable (uint32_t EintMask, FunctionalState NewState);
+FlagStatus INT_Get_External_Flag (uint32_t EintNum);
+void INT_External_Clear_Flag (uint32_t EintNum);
+void INT_External_Source_Enable (uint32_t EintNum, uint32_t PeripheralSource);
+# 19 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h" 1
+# 33 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_NOPULL = 0x00,
+    GPIO_PULLUP = 0x01
+}GPIOPU_TypeDef, GPIOPD_TypeDef;
+# 47 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_POD_PP = 0x00,
+    GPIO_POD_OD = 0x01
+}GPIOPOD_TypeDef;
+
+
+
+
+
+
+typedef enum
+{
+    GPIO_MODE_IN = 0x00,
+    GPIO_MODE_OUT = 0x01,
+    GPIO_MODE_RMP = 0x02,
+    GPIO_MODE_AN = 0x03
+}GPIOMode_TypeDef;
+# 73 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_LOW_SPEED = 0,
+    GPIO_HIGH_SPEED = 1
+}GPIOSpeed_TypeDef;
+
+
+
+
+
+
+typedef struct
+{
+    uint32_t m_Pin;
+
+
+    GPIOMode_TypeDef m_Mode;
+
+
+    GPIOSpeed_TypeDef m_Speed;
+
+
+    GPIOPOD_TypeDef m_OpenDrain;
+
+
+    GPIOPU_TypeDef m_PullUp;
+
+
+    GPIOPD_TypeDef m_PullDown;
+
+}GPIO_InitTypeDef;
+
+
+
+
+typedef enum
+{
+    Bit_RESET = 0,
+    Bit_SET = !Bit_RESET
+}BitAction;
+# 278 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+void GPIO_Reset (GPIO_SFRmap* GPIOx);
+void GPIO_Configuration (GPIO_SFRmap* GPIOx, GPIO_InitTypeDef* gpioInitStruct);
+void GPIO_Struct_Init (GPIO_InitTypeDef* gpioInitStruct);
+void GPIO_Pin_Lock_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Pull_Up_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Toggle_Pull_Up_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Pull_Down_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Toggle_Pull_Down_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Open_Drain_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOPOD_TypeDef NewState);
+void GPIO_Toggle_Open_Drain_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Write_Mode_Bits (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOMode_TypeDef NewState);
+void GPIO_Speed_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOSpeed_TypeDef NewState);
+void GPIO_Toggle_Speed_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+
+BitAction GPIO_Read_Input_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+uint16_t GPIO_Read_Input_Data (GPIO_SFRmap* GPIOx);
+BitAction GPIO_Read_Output_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+uint16_t GPIO_Read_Output_Data (GPIO_SFRmap* GPIOx);
+void GPIO_Set_Output_Data_Bits (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, BitAction BitsValue);
+void GPIO_Toggle_Output_Data_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+
+void GPIO_Pin_RMP_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPinNum, uint8_t PinRemap);
+# 20 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h" 1
+# 18 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h"
+typedef enum
+{
+    LOCK = 0,
+    UNLOCK = !LOCK
+} LockStatus;
+
+
+
+
+
+typedef union CheckSumStruct
+{
+    uint32_t m_ResultWord[4];
+    uint32_t m_ResultShort[8];
+    uint32_t m_ResultByte[16];
+}FLASH_CheckSumResult;
+
+
+
+
+typedef struct
+{
+    uint32_t m_Mode;
+
+    uint32_t m_Zone;
+
+    uint32_t m_Addr;
+
+    uint32_t m_WriteSize;
+
+    uint32_t * m_Data;
+
+}FLASH_ProgramTypeDef;
+# 142 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h"
+LockStatus FLASH_Get_NonVolatile_Memory_Unlock_Status_RAM (void);
+void FLASH_Clear_NonVolatile_Memory_Unlock_Status_RAM (void);
+void FLASH_Unlock_ISP_RAM (void);
+LockStatus FLASH_Get_Flash_Unlock_Status_RAM (void);
+void FLASH_Clear_Flash_Unlock_Status_RAM (void);
+void FLASH_Unlock_Code_RAM (void);
+LockStatus FLASH_Get_Config_Unlock_Status_RAM (void);
+void FLASH_Clear_Config_Unlock_Status_RAM (void);
+void FLASH_Unlock_User_Config_RAM (void);
+void FLASH_Data_Write_Enable_RAM (FunctionalState NewState);
+void FLASH_Zone_Config_RAM (uint32_t ZoneSelect);
+void FLASH_Standby_Mode_Config_RAM (uint32_t ModeSelect);
+void FLASH_IP_Config_RAM (uint32_t FlashIPSelect);
+void FLASH_Read_Mode_Config_RAM (uint32_t ReadMode);
+void FLASH_Calibration_Updata_Enable_RAM (FunctionalState NewState);
+void FLASH_Information_Zone_Wipe_Unlock_Config_RAM (LockStatus NewState);
+void FLASH_Half_Page_Write_Size_Config_RAM (uint32_t WriteSize);
+void FLASH_Program_Cmd_Config_RAM (uint32_t CmdSelect);
+void FLASH_Executive_Cmd_RAM (void);
+void FLASH_NonVolatile_Memory_ECC_Enable_RAM (FunctionalState NewState);
+void FLASH_Linear_Prefetch_Enable_RAM (FunctionalState NewState);
+void FLASH_Period_Number_Config_RAM (uint32_t PeriodNum);
+void FLASH_Program_Addr_Config_RAM (uint32_t ProgramAddr);
+FlagStatus FLASH_Get_Program_Status_RAM (void);
+FlagStatus FLASH_Get_Wipe_Status_RAM (void);
+FlagStatus FLASH_Get_Compute_Complete_Status_RAM (void);
+void FLASH_Clear_Compute_Complete_Status_RAM (void);
+
+void FLASH_Forbid_Remap_Enable_RAM (FunctionalState NewState);
+void FLASH_Forbid_SWD_Enable_RAM (FunctionalState NewState);
+FlagStatus FLASH_Get_CFG_Error_Flag_RAM (void);
+void FLASH_Clear_CFG_Error_Flag_RAM (void);
+
+void FLASH_CheckSum_Addr_Config_RAM(uint32_t StartAddr, uint32_t StopAddr);
+void FLASH_Start_SIG_Compute_Enable_RAM (FunctionalState NewState);
+void FLASH_Get_CheckSum_Result_RAM (FLASH_CheckSumResult* CheckSumStruct);
+
+void FLASH_Wipe_Configuration_RAM (uint32_t WipeMode,
+                    uint32_t WipeAddr);
+void FLASH_Program_Configuration_RAM (FLASH_ProgramTypeDef * flashProgramStruct);
+
+void FLASH_Clear_NonVolatile_Memory_Unlock_Status (void);
+
+void FLASH_Unlock_ISP (void);
+void FLASH_Clear_Flash_Unlock_Status (void);
+void FLASH_Unlock_Code (void);
+
+void FLASH_Clear_Config_Unlock_Status (void);
+void FLASH_Unlock_User_Config(void);
+
+void FLASH_Zone_Config(uint32_t ZoneSelect);
+void FLASH_Executive_Cmd(void);
+
+FlagStatus FLASH_Get_Program_Status (void);
+
+FlagStatus FLASH_Get_Wipe_Status (void);
+
+void FLASH_Wipe_Configuration (uint32_t WipeMode,uint32_t WipeAddr);
+
+uint32_t Read_Flash_or_CFR(uint32_t address,uint32_t ZoneSelect);
+uint32_t Read_Flash_or_CFR_RAM (uint32_t address,uint32_t ZoneSelect);
+void FLASH_Program_Configuration (FLASH_ProgramTypeDef * flashProgramStruct);
+void FLASH_Program_Configuration_RAM (FLASH_ProgramTypeDef * flashProgramStruct);
+
+uint32_t Read_Soft_Device_ID1(void);
+uint32_t Read_Soft_Device_ID2(void);
+uint32_t Read_Soft_Device_ID3(void);
+uint32_t Read_Soft_Device_ID4(void);
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+
+# 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h" 1
+# 12 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
+# 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdarg.h" 1
+# 18 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdarg.h"
+typedef unsigned char * va_list;
+# 13 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h" 2
+# 32 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
+typedef void *STREAM;
+# 74 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
+extern char getchar (void);
+extern char fgetchar (STREAM *stream);
+
+extern int putchar (int c);
+extern int fputchar (int c,STREAM *stream);
+# 145 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
+extern int puts (const char *);
+extern int fputs(const char *str,STREAM *stream);
+extern int fwrite(const char *str,unsigned int Size,unsigned int N, STREAM *stream);
+
+
+
+
+extern char _scanf_buf_[256];
+
+extern char getche(void);
+
+
+
+
+
+
+extern char * gets(char * s);
+extern char * cgets(char * s);
+
+extern int scanf (const char * fmt, ...);
+extern int vscanf (const char * fmt, va_list ap);
+
+extern int fscanf (const char * str,const char * fmt, ...);
+extern int sscanf (const char * str,const char * fmt, ...);
+
+extern int vsscanf(const char * str,const char * fmt, va_list ap);
+
+
+
+
+extern int printf (const char *fmt, ...);
+
+extern int fprintf (STREAM *stream, const char *fmt, ...);
+
+extern int sprintf (char *str, const char *fmt, ...);
+extern int snprintf (char *str, unsigned int n, const char *format, ...);
+
+
+
+
+extern int vprintf (const char *fmt, va_list ap);
+extern int vfprintf (STREAM *stream, const char *fmt, va_list ap);
+extern int vsprintf (char *str, const char *fmt, va_list ap);
+extern int vsnprintf (char *s, unsigned int n, const char *format, va_list ap);
+# 212 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
+extern void printf_small (const char *fmt, ...);
+extern void printf_tiny (const char *fmt, ...);
+# 23 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h" 1
+# 26 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h"
+extern int ffs (int);
+extern int ffsl (long);
+extern int ffsll (long long);
+extern void * memchr(const void *, int, size_t);
+extern int memcmp(const void *, const void *, size_t);
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+extern int strcasecmp (const char *, const char *);
+extern char * strcat(char *, const char *);
+extern char * strchr(const char *, int);
+extern int strcmp(const char *, const char *);
+extern int strcoll(const char *, const char *);
+extern char * strcpy(char *, const char *);
+extern size_t strcspn(const char *, const char *);
+
+extern size_t strlen(const char *);
+extern int strncasecmp (const char *, const char *, size_t);
+extern char * strncat(char *, const char *, size_t);
+extern int strncmp(const char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strpbrk(const char *, const char *);
+extern char * strrchr(const char *, int);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * strtok(char *, const char *);
+extern size_t strxfrm(char *, const char *, size_t);
+
+
+extern char * strdup(const char *);
+# 24 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+
+
+
+void bsp_init(void);
 # 2 "../Driver/iap.c" 2
+# 1 "../Driver/iap.h" 1
+# 18 "../Driver/iap.h"
+typedef struct
+{
+    uint32_t iap_flg;
+    uint32_t fw_len;
+    uint32_t cks;
+    uint8_t md5[16];
+}iap_infor_t;
+
+typedef enum
+{
+    IAP_START,
+    IAP_FIRMWARE_INFO_CHECK,
+    IAP_RECV_PACKAGE_DATA,
+    IAP_END,
+}iap_state_t;
+
+typedef struct
+{
+    uint32_t file_rec_cks;
+    uint32_t file_bytes_num;
+    uint32_t bytes_count;
+    uint16_t last_pkt_index;
+    uint8_t firmware_id;
+    uint32_t cks;
+    uint8_t md5[16];
+}iap_handle_t;
+
+uint8_t iap_is_app_valid(uint32_t app_addr);
+void iap_jump_to_app(uint32_t app_addr);
+
+uint8_t iap_app_verify(void);
+void iap_info_clear(void);
+void iap_app_update(void);
+# 3 "../Driver/iap.c" 2
+# 1 "../Driver/md5.h" 1
+
+
+
+
+
+void md5_init(void);
+void md5_update(uint8_t *input, size_t input_len);
+void md5_finalize(uint8_t *ret_md5_data);
+void md5_step(uint32_t *buffer, uint32_t *input);
+
+void md5_string(char *input, uint8_t *result);
+void md5_flash(uint32_t start_addr, uint32_t size, uint8_t *result);
+# 4 "../Driver/iap.c" 2
+
+
+typedef void (*pFunction)(void) __attribute__((noreturn));
+
+
+
+
+
+
+static uint32_t iap_get_appstackpointer(uint32_t app_addr)
+{
+    return (*((volatile uint32_t *)app_addr));
+}
+
+
+
+
+
+
+static uint32_t iap_get_jumpaddress(uint32_t app_addr)
+{
+    return (*((volatile uint32_t *)(app_addr + 4U)));
+}
+
+
+
+
+
+
+
+uint8_t iap_is_app_valid(uint32_t app_addr)
+{
+    uint32_t app_stack = iap_get_appstackpointer(app_addr);
+
+    if ((app_stack < ((uint32_t)0x10000000U)) || (app_stack > ((uint32_t)((uint32_t)0x10000000U) + ((uint32_t)((uint32_t)0x0400U) * 96U))) || ((app_stack & 0x3U) != 0U))
+    {
+        return 0;
+    }
+
+    return 1;
+}
+
+
+
+
+
+
+__attribute__((noreturn)) void iap_jump_to_app(uint32_t app_addr)
+{
+    (((SYSCTL_SFRmap *) ((uint32_t)0x402000B0))->VECTOFF) = app_addr;
+    uint32_t jump_address = iap_get_jumpaddress(app_addr);
+    pFunction jump_to_app = (pFunction)jump_address;
+
+    jump_to_app();
+
+}
+
+
+
+
+static iap_infor_t iap_info;
+
+
+
+
+
+
+uint8_t iap_app_verify(void)
+{
+    uint8_t md5_result[16];
+
+    flash_read_nbyte(((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U) - ((uint32_t)((uint32_t)0x0400U) * 1U)), (uint8_t *)&iap_info, sizeof(iap_info));
+
+    if(iap_info.iap_flg != 0x56AB56AB)
+    {
+        return 0;
+    }
+
+    if((iap_info.fw_len == 0) || (iap_info.fw_len > ((uint32_t)((uint32_t)0x0400U) * 48U)))
+    {
+        return 0;
+    }
+
+    md5_flash(((uint32_t)((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U)) + ((uint32_t)((uint32_t)0x0400U) * 48U)), iap_info.fw_len, md5_result);
+
+    if(memcmp(md5_result, iap_info.md5, sizeof(md5_result)) != 0)
+    {
+        return 0;
+    }
+
+    return 1;
+}
+
+
+
+
+
+
+void iap_info_clear(void)
+{
+    flash_erase_page(((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U) - ((uint32_t)((uint32_t)0x0400U) * 1U)));
+    memset(&iap_info, 0, sizeof(iap_info));
+}
+
+
+
+
+
+
+void iap_app_update(void)
+{
+    uint32_t buffer[256];
+    uint32_t len = iap_info.fw_len;
+    uint32_t addr_read = ((uint32_t)((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U)) + ((uint32_t)((uint32_t)0x0400U) * 48U));
+    uint32_t addr_write = ((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U));
+
+
+    flash_erase_range(((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U)), ((uint32_t)((uint32_t)0x00000000U) + ((uint32_t)((uint32_t)0x0400U) * 16U)) + ((uint32_t)((uint32_t)0x0400U) * 48U));
+
+
+    while(len)
+    {
+        if(len >= sizeof(buffer))
+        {
+            flash_read_nbyte(addr_read, (uint8_t *)buffer, sizeof(buffer));
+
+            INT_All_Enable(FALSE);
+            flash_write_page(addr_write, buffer, 128);
+            INT_All_Enable(TRUE);
+
+            len -= sizeof(buffer);
+            addr_read += sizeof(buffer);
+            addr_write += sizeof(buffer);
+        }
+        else
+        {
+            for(uint32_t i = 0; i < (sizeof(buffer) / sizeof(buffer[0])); i++)
+            {
+                buffer[i] = 0xFFFFFFFF;
+            }
+
+            flash_read_nbyte(addr_read, (uint8_t *)buffer, len);
+
+            INT_All_Enable(FALSE);
+            flash_write_page(addr_write, buffer, 128);
+            INT_All_Enable(TRUE);
+
+            break;
+        }
+    }
+}

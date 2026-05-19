@@ -4268,8 +4268,8 @@ GPIO_Pin_RMP_Config:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_gpio.c"
@@ -5521,8 +5521,8 @@ GPIO_Pin_RMP_Config:
 	.string	"m_Mode"
 .LASF73:
 	.string	"GPIO_Read_Output_Data"
-.LASF82:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
+.LASF34:
+	.string	"GPIO_LOW_SPEED"
 .LASF81:
 	.string	"../Peripherals/src/kf32f_basic_gpio.c"
 .LASF72:
@@ -5619,12 +5619,14 @@ GPIO_Pin_RMP_Config:
 	.string	"SfrMask"
 .LASF62:
 	.string	"GPIO_Toggle_Pull_Up_Config"
-.LASF34:
-	.string	"GPIO_LOW_SPEED"
+.LASF21:
+	.string	"GPIO_SFRmap"
 .LASF52:
 	.string	"GPIOx"
 .LASF14:
 	.string	"PODR"
+.LASF82:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF46:
 	.string	"BitAction"
 .LASF66:
@@ -5649,8 +5651,6 @@ GPIO_Pin_RMP_Config:
 	.string	"sizetype"
 .LASF25:
 	.string	"GPIOPD_TypeDef"
-.LASF21:
-	.string	"GPIO_SFRmap"
 .LASF53:
 	.string	"gpioInitStruct"
 .LASF61:

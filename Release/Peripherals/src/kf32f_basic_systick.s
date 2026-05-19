@@ -1271,8 +1271,8 @@ SYSTICK_Get_Counter:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_systick.c"
@@ -1616,8 +1616,8 @@ SYSTICK_Get_Counter:
 	.string	"TRUE"
 .LASF1:
 	.string	"short unsigned int"
-.LASF11:
-	.string	"FunctionalState"
+.LASF37:
+	.string	"SFR_Config"
 .LASF15:
 	.string	"RELOAD"
 .LASF25:
@@ -1636,8 +1636,10 @@ SYSTICK_Get_Counter:
 	.string	"RESET"
 .LASF29:
 	.string	"SYSTICK_Systick_INT_Enable"
-.LASF8:
-	.string	"FALSE"
+.LASF11:
+	.string	"FunctionalState"
+.LASF35:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF30:
 	.string	"SYSTICK_Reload_Config"
 .LASF20:
@@ -1646,12 +1648,12 @@ SYSTICK_Get_Counter:
 	.string	"SYSTICK_MemMap"
 .LASF0:
 	.string	"unsigned int"
+.LASF8:
+	.string	"FALSE"
 .LASF6:
 	.string	"long long unsigned int"
 .LASF28:
 	.string	"SysClock"
-.LASF37:
-	.string	"SFR_Config"
 .LASF22:
 	.string	"SysTickINT"
 .LASF38:
@@ -1682,6 +1684,4 @@ SYSTICK_Get_Counter:
 	.string	"CALI"
 .LASF2:
 	.string	"signed char"
-.LASF35:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

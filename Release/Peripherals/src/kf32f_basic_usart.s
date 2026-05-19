@@ -9361,8 +9361,8 @@ USART_Clear_Transmit_BUFR_INT_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_usart.c"
@@ -13487,8 +13487,8 @@ USART_Clear_Transmit_BUFR_INT_Flag:
 	.string	"USART_Blank_INT_Enable"
 .LASF0:
 	.string	"unsigned int"
-.LASF13:
-	.string	"FunctionalState"
+.LASF154:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF111:
 	.string	"USART_Parity_ERROR_INT_Enable"
 .LASF122:
@@ -13639,14 +13639,14 @@ USART_Clear_Transmit_BUFR_INT_Flag:
 	.string	"m_Clkout"
 .LASF42:
 	.string	"m_ReceiveRepeat"
-.LASF154:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF56:
 	.string	"USART_Struct_Init"
 .LASF156:
 	.string	"SFR_Config"
 .LASF33:
 	.string	"m_HardwareFlowControl"
+.LASF13:
+	.string	"FunctionalState"
 .LASF73:
 	.string	"USART_Transmit_Data_Enable"
 .LASF144:

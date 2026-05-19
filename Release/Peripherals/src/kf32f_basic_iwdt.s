@@ -810,8 +810,8 @@ IWDT_Feed_The_Dog:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_iwdt.c"
@@ -981,14 +981,16 @@ IWDT_Feed_The_Dog:
 	.section .debug_str
 	.type	.debug_str$scode_local_11, @function
 	.debug_str$scode_local_11:
+.LASF8:
+	.string	"FALSE"
 .LASF15:
 	.string	"SfrMask"
 .LASF9:
 	.string	"TRUE"
 .LASF13:
 	.string	"IWDT_SFRmap"
-.LASF11:
-	.string	"FunctionalState"
+.LASF27:
+	.string	"SFR_Config"
 .LASF20:
 	.string	"Overflow"
 .LASF3:
@@ -999,8 +1001,10 @@ IWDT_Feed_The_Dog:
 	.string	"short unsigned int"
 .LASF29:
 	.string	"IWDT_Feed_The_Dog"
-.LASF8:
-	.string	"FALSE"
+.LASF11:
+	.string	"FunctionalState"
+.LASF25:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF26:
 	.string	"IWDT_MemMap"
 .LASF16:
@@ -1013,8 +1017,6 @@ IWDT_Feed_The_Dog:
 	.string	"unsigned int"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF27:
-	.string	"SFR_Config"
 .LASF12:
 	.string	"sizetype"
 .LASF24:
@@ -1039,6 +1041,4 @@ IWDT_Feed_The_Dog:
 	.string	"signed char"
 .LASF19:
 	.string	"Prescaler"
-.LASF25:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

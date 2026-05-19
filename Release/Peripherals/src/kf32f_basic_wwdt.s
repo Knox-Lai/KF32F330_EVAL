@@ -1234,8 +1234,8 @@ WWDT_Clear_INT_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_wwdt.c"
@@ -1572,6 +1572,8 @@ WWDT_Clear_INT_Flag:
 	.debug_str$scode_local_16:
 .LASF33:
 	.string	"WWDT_MemMap"
+.LASF8:
+	.string	"FALSE"
 .LASF17:
 	.string	"SfrMask"
 .LASF36:
@@ -1580,8 +1582,8 @@ WWDT_Clear_INT_Flag:
 	.string	"WWDT_Threshold_Config"
 .LASF1:
 	.string	"short unsigned int"
-.LASF11:
-	.string	"FunctionalState"
+.LASF34:
+	.string	"SFR_Config"
 .LASF29:
 	.string	"WWDT_INT_Enable"
 .LASF31:
@@ -1596,8 +1598,10 @@ WWDT_Clear_INT_Flag:
 	.string	"NewState"
 .LASF24:
 	.string	"WWDT_Enable"
-.LASF8:
-	.string	"FALSE"
+.LASF11:
+	.string	"FunctionalState"
+.LASF32:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF27:
 	.string	"Counter"
 .LASF18:
@@ -1610,8 +1614,6 @@ WWDT_Clear_INT_Flag:
 	.string	"unsigned int"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF34:
-	.string	"SFR_Config"
 .LASF14:
 	.string	"sizetype"
 .LASF5:
@@ -1640,8 +1642,6 @@ WWDT_Clear_INT_Flag:
 	.string	"signed char"
 .LASF23:
 	.string	"Prescaler"
-.LASF32:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF12:
 	.string	"RESET"
 .LASF22:

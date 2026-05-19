@@ -1,0 +1,62 @@
+Driver/ota_boot.o: ../Driver/ota_boot.c \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_usart.h \
+ D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h \
+ D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_flash.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_systick.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_BASIC.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_Config.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL/__Kungfu32_chipmodel_define.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_usart.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_BASIC.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_int.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_gpio.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_flash.h \
+ D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h \
+ D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdarg.h \
+ D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h \
+ ../Driver/ota_boot.h ../Driver/flash_eeprom.h ../Driver/md5.h \
+ E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL/utilities.h
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_usart.h:
+
+D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h:
+
+D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_flash.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\BSP/bsp_systick.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_BASIC.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_Config.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL/__Kungfu32_chipmodel_define.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_usart.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/KF32F_BASIC.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_int.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_gpio.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL\Peripherals\inc/kf32f_basic_flash.h:
+
+D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h:
+
+D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdarg.h:
+
+D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h:
+
+../Driver/ota_boot.h:
+
+../Driver/flash_eeprom.h:
+
+../Driver/md5.h:
+
+E:\KF_Workspace\Project_WorkSpace\KF32F330_EVAL/utilities.h:

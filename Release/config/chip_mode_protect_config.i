@@ -1,5 +1,5 @@
 # 1 "../config/chip_mode_protect_config.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Release//"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Release//"
 # 1 "<command-line>"
 # 1 "../config/chip_mode_protect_config.c"
 # 11 "../config/chip_mode_protect_config.c"

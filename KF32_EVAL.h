@@ -5,31 +5,31 @@
 
 typedef enum
 {
-  LED3 = 0,
-  LED4 = 1,
-  LED5 = 2,
+  LED1 = 0,
+  LED2 = 1,
+  LED3 = 2,
 
-} Led_TypeDef;
+} led_typedef;
 
 typedef enum
 {
-  COM1 = 0,
-  COM2 = 1,
-  COM3 = 2,
-  COM4 = 3,
+  EVAL_COM1 = 0,
+  EVAL_COM2 = 1,
+  EVAL_COM3 = 2,
+  EVAL_COM4 = 3,
 
 } usart_typedef;
 
 #define LEDn                             3
 
-#define LED0_PIN                         GPIO_PIN_MASK_5
-#define LED0_GPIO_PORT                   GPIOH_SFR
-
-#define LED1_PIN                         GPIO_PIN_MASK_6
+#define LED1_PIN                         GPIO_PIN_MASK_5
 #define LED1_GPIO_PORT                   GPIOH_SFR
 
-#define LED2_PIN                         GPIO_PIN_MASK_13
-#define LED2_GPIO_PORT                   GPIOD_SFR
+#define LED2_PIN                         GPIO_PIN_MASK_6
+#define LED2_GPIO_PORT                   GPIOH_SFR
+
+#define LED3_PIN                         GPIO_PIN_MASK_13
+#define LED3_GPIO_PORT                   GPIOD_SFR
 
 #define EVAL_COMn                             4
 
@@ -79,10 +79,10 @@ typedef enum
 
 void kf_eval_usart_init(usart_typedef com_id);
 
-void kf_eval_led_init(Led_TypeDef Led);
-void kf_eval_led_on(Led_TypeDef Led);
-void kf_eval_led_off(Led_TypeDef Led);
-void kf_eval_led_toggle(Led_TypeDef Led);
+void kf_eval_led_init(led_typedef Led);
+void kf_eval_led_on(led_typedef Led);
+void kf_eval_led_off(led_typedef Led);
+void kf_eval_led_toggle(led_typedef Led);
 
 
 #endif

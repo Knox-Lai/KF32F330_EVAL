@@ -2085,8 +2085,8 @@ SYSCTL_Flash_Start_Remap_Config:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_sysctl.c"
@@ -2867,22 +2867,22 @@ SYSCTL_Flash_Start_Remap_Config:
 	.debug_str$scode_local_27:
 .LASF26:
 	.string	"SYSCTL_Get_C_Flag"
-.LASF51:
-	.string	"../Peripherals/src/kf32f_basic_sysctl.c"
+.LASF8:
+	.string	"FALSE"
 .LASF47:
 	.string	"SYSCTL_Ram_Space_Config"
 .LASF23:
 	.string	"SfrMask"
 .LASF9:
 	.string	"TRUE"
-.LASF54:
-	.string	"SFR_Config"
+.LASF40:
+	.string	"SYSCTL_Stack_Pointer_Config"
 .LASF43:
 	.string	"SYSCTL_System_Reset_Enable"
 .LASF1:
 	.string	"short unsigned int"
-.LASF11:
-	.string	"FunctionalState"
+.LASF54:
+	.string	"SFR_Config"
 .LASF41:
 	.string	"PresentSP"
 .LASF13:
@@ -2905,14 +2905,14 @@ SYSCTL_Flash_Start_Remap_Config:
 	.string	"RESET"
 .LASF37:
 	.string	"SYSCTL_Stack_Align_State"
-.LASF8:
-	.string	"FALSE"
-.LASF40:
-	.string	"SYSCTL_Stack_Pointer_Config"
+.LASF11:
+	.string	"FunctionalState"
 .LASF45:
 	.string	"SYSCTL_Vector_Offset_Config"
 .LASF39:
 	.string	"SYSCTL_Stack_Pointer_State"
+.LASF52:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF21:
 	.string	"SYSCTL_SFRmap"
 .LASF28:
@@ -2933,6 +2933,8 @@ SYSCTL_Flash_Start_Remap_Config:
 	.string	"SYSCTL_Deep_Sleep_Enable"
 .LASF17:
 	.string	"VECTOFF"
+.LASF51:
+	.string	"../Peripherals/src/kf32f_basic_sysctl.c"
 .LASF14:
 	.string	"sizetype"
 .LASF5:
@@ -2947,8 +2949,6 @@ SYSCTL_Flash_Start_Remap_Config:
 	.string	"RESEVRVE1"
 .LASF48:
 	.string	"RamSpace"
-.LASF46:
-	.string	"VectorOffset"
 .LASF4:
 	.string	"short int"
 .LASF44:
@@ -2973,8 +2973,8 @@ SYSCTL_Flash_Start_Remap_Config:
 	.string	"ARCTL"
 .LASF15:
 	.string	"MCTL"
-.LASF52:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
+.LASF46:
+	.string	"VectorOffset"
 .LASF25:
 	.string	"SYSCTL_Get_V_Flag"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

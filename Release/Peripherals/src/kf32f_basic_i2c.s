@@ -5770,8 +5770,8 @@ I2C_Get_Bus_Error_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_i2c.c"
@@ -8111,8 +8111,6 @@ I2C_Get_Bus_Error_Flag:
 	.string	"../Peripherals/src/kf32f_basic_i2c.c"
 .LASF26:
 	.string	"m_Mode"
-.LASF112:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF16:
 	.string	"sizetype"
 .LASF41:
@@ -8265,8 +8263,8 @@ I2C_Get_Bus_Error_Flag:
 	.string	"m_AckData"
 .LASF90:
 	.string	"I2C_Get_HighAddress_Flag"
-.LASF69:
-	.string	"DataMask"
+.LASF112:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF80:
 	.string	"I2C_ISIE_INT_Enable"
 .LASF13:
@@ -8303,6 +8301,8 @@ I2C_Get_Bus_Error_Flag:
 	.string	"I2C_SMBus_ALERT_Config"
 .LASF52:
 	.string	"I2C_Clock_Config"
+.LASF69:
+	.string	"DataMask"
 .LASF82:
 	.string	"I2C_Transmit_DMA_INT_Enable"
 .LASF18:

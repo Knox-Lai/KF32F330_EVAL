@@ -1,15 +1,17 @@
 # 1 "../Driver/boot.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Release//"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Release//"
 # 1 "<command-line>"
 # 1 "../Driver/boot.c"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 1
-# 10 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_usart.h" 1
+# 9 "../Driver/boot.c"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 1
 
 
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 20 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_delay.h" 1
+
+
+
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h" 1
 # 16 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdint.h"
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stddef.h" 1
@@ -72,13 +74,28 @@ typedef unsigned long long uint_fast64_t;
 
 typedef long long intmax_t;
 typedef unsigned long long uintmax_t;
-# 21 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_Config.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_Config.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader/__Kungfu32_chipmodel_define.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_Config.h" 2
-# 22 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h" 2
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 5 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_delay.h" 2
+
+
+uint32_t delay_tick_get(void);
+void delay_tick_cnt_up(void);
+void delay_ms_timer(volatile uint32_t nms);
+void delay_ms_for(volatile uint32_t nms);
+void delay_us_systick(unsigned int nus);
+void delay_ms_systick(unsigned int nms);
+# 6 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_usart.h" 1
+
+
+
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL/__Kungfu32_chipmodel_define.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_Config.h" 2
+# 22 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef enum
 {
     FALSE = 0,
@@ -202,7 +219,7 @@ typedef enum {
     INT_USART6 = 78,
     INT_USART7 = 79,
 } InterruptIndex;
-# 171 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 171 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPIO_MemMap {
     volatile const uint32_t PIR;
     volatile uint32_t POR;
@@ -216,7 +233,7 @@ typedef struct GPIO_MemMap {
                 uint32_t RESERVED;
     volatile uint32_t CTMDCTL[2];
 }GPIO_SFRmap;
-# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 1127 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct OSC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -230,7 +247,7 @@ typedef struct OSC_MemMap {
 typedef struct PLL_MemMap {
    volatile uint32_t CTL;
 }PLL_SFRmap;
-# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 1450 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct INT_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t EIE0;
@@ -273,7 +290,7 @@ typedef struct INT_MemMap {
     volatile uint32_t EINTSS1;
     volatile uint32_t CTL1;
 }INT_SFRmap;
-# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 3309 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSCTL_MemMap {
     volatile uint32_t PSW;
     volatile uint32_t MCTL;
@@ -283,7 +300,7 @@ typedef struct SYSCTL_MemMap {
     volatile uint32_t RAMSPA;
     volatile uint32_t MEMCTL;
 }SYSCTL_SFRmap;
-# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 3398 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ADC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -312,7 +329,7 @@ typedef struct ADC_Delay_MemMap
 {
     volatile uint32_t DELAY;
 }ADC_DELAY_SFRmap;
-# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 4058 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DMA_MemMap {
     union {
         struct
@@ -401,14 +418,14 @@ typedef struct DMA_MemMap {
     volatile uint32_t LIFR;
     volatile uint32_t LIER;
 }DMA_SFRmap;
-# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 4713 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SYSTICK_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t RELOAD;
     volatile uint32_t CV;
     volatile uint32_t CALI;
 }SYSTICK_SFRmap;
-# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 4767 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -419,7 +436,7 @@ typedef struct BTIM_MemMap {
     volatile const uint32_t SR;
     volatile uint32_t SRIC;
 }BTIM_SFRmap;
-# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 4955 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct GPTIM_MemMap {
     volatile uint32_t CNT;
     volatile uint32_t CTL1;
@@ -444,7 +461,7 @@ typedef struct GPTIM_MemMap {
     volatile uint32_t CCPXCTL3;
     volatile uint32_t CCPXEGIF;
 }GPTIM_SFRmap, CCP_SFRmap;
-# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 5565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct ATIM_MemMap {
     volatile uint32_t TXCNT;
     volatile uint32_t TZCNT;
@@ -489,7 +506,7 @@ typedef struct ATIM_MemMap {
     volatile uint32_t ECCPXSRIC;
     volatile uint32_t ECCPXCTL3;
 }ATIM_SFRmap, ECCP_SFRmap;
-# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 6294 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct QEI_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -498,7 +515,7 @@ typedef struct QEI_MemMap {
     volatile uint32_t PRSC;
     volatile uint32_t DIER;
 }QEI_SFRmap;
-# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 6412 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct DAC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DAHD;
@@ -507,7 +524,7 @@ typedef struct DAC_MemMap {
                    uint32_t RESERVED;
     volatile uint32_t CAL;
 }DAC_SFRmap;
-# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 6565 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CMP_MemMap {
     volatile uint32_t CTL;
 
@@ -516,7 +533,7 @@ typedef struct CMP_MemMap {
 
 
 }CMP_SFRmap;
-# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 8129 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RTC_MemMap {
     volatile uint32_t CR;
     volatile uint32_t ALRA;
@@ -530,38 +547,38 @@ typedef struct RTC_MemMap {
     volatile uint32_t TMBR;
     volatile uint32_t DTBR;
 }RTC_SFRmap;
-# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 8672 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct IWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t FD;
 }IWDT_SFRmap;
-# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 8705 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct WWDT_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t CNT;
 }WWDT_SFRmap;
-# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 8745 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct RST_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }RST_SFRmap;
-# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 9121 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PCLK_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t CTL2;
     volatile uint32_t CTL3;
 }PCLK_SFRmap;
-# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 9497 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct SPI_MemMap {
     volatile uint32_t BRGR;
     volatile uint32_t CTLR;
     volatile uint32_t BUFR;
     volatile uint32_t STR;
 }SPI_SFRmap;
-# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 9657 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct I2C_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t SR;
@@ -574,7 +591,7 @@ typedef struct I2C_MemMap {
     volatile uint32_t IER;
     volatile uint32_t TPSR;
 }I2C_SFRmap;
-# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 9936 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USART_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -587,7 +604,7 @@ typedef struct USART_MemMap {
     volatile uint32_t IER;
     volatile uint32_t ADM;
 }USART_SFRmap;
-# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 10341 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct USB_MemMap {
     volatile uint32_t UCON;
     volatile const uint32_t USTAT;
@@ -598,7 +615,7 @@ typedef struct USB_MemMap {
     volatile uint32_t UEP[8];
     volatile uint32_t UDB;
 }USB_SFRmap;
-# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 10589 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CAN_MemMap {
     volatile uint32_t CTLR;
     volatile uint32_t BRGR;
@@ -617,7 +634,7 @@ typedef struct CAN_MemMap {
     volatile const uint32_t RXDATA2;
     volatile const uint32_t RXDATA3;
 }CAN_SFRmap;
-# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 11691 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct PM_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -629,14 +646,14 @@ typedef struct PM_MemMap {
     volatile uint32_t CAL1;
     volatile uint32_t CAL2;
 }PM_SFRmap;
-# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12086 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct BKP_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t INT;
              uint32_t RESERVED[14];
     volatile uint32_t DATA[32];
 }BKP_SFRmap;
-# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12196 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct FLASH_MemMap {
     volatile uint32_t ISPCON0;
     volatile uint32_t ISPCON1;
@@ -656,7 +673,7 @@ typedef struct FLASH_MemMap {
     volatile uint32_t CSSTOP;
     volatile uint32_t CSRES[4];
 }FLASH_SFRmap;
-# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12394 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CRC_MemMap {
     volatile uint32_t CTL;
     volatile uint32_t DATA;
@@ -667,7 +684,7 @@ typedef struct CRC_MemMap {
     volatile uint32_t IDATA;
     volatile uint32_t TEMP;
 }CRC_SFRmap;
-# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12444 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct AES_MemMap {
     volatile uint32_t CTL;
        uint32_t RESERVED1;
@@ -686,7 +703,7 @@ typedef struct AES_MemMap {
     volatile uint32_t OUTPUT2;
     volatile uint32_t OUTPUT3;
 }AES_SFRmap;
-# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12900 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct EXIC_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
@@ -696,121 +713,19 @@ typedef struct EXIC_MemMap {
     volatile uint32_t READBUF;
 
 }EXIC_SFRmap;
-# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 12980 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 typedef struct CFGL_MemMap {
     volatile uint32_t CTL0;
     volatile uint32_t CTL1;
     volatile uint32_t IFR;
 }CFGL_SFRmap;
-# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h"
+# 13333 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h"
 static inline uint32_t
 SFR_Config (uint32_t SfrMem, uint32_t SfrMask, uint32_t WriteVal)
 {
     return ((SfrMem & SfrMask) | (WriteVal));
 }
-# 5 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_usart.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h" 1
-# 15 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h"
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/KF32F_BASIC.h" 1
-# 16 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h" 2
-# 33 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h"
-typedef enum
-{
-    GPIO_NOPULL = 0x00,
-    GPIO_PULLUP = 0x01
-}GPIOPU_TypeDef, GPIOPD_TypeDef;
-# 47 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h"
-typedef enum
-{
-    GPIO_POD_PP = 0x00,
-    GPIO_POD_OD = 0x01
-}GPIOPOD_TypeDef;
-
-
-
-
-
-
-typedef enum
-{
-    GPIO_MODE_IN = 0x00,
-    GPIO_MODE_OUT = 0x01,
-    GPIO_MODE_RMP = 0x02,
-    GPIO_MODE_AN = 0x03
-}GPIOMode_TypeDef;
-# 73 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h"
-typedef enum
-{
-    GPIO_LOW_SPEED = 0,
-    GPIO_HIGH_SPEED = 1
-}GPIOSpeed_TypeDef;
-
-
-
-
-
-
-typedef struct
-{
-    uint32_t m_Pin;
-
-
-    GPIOMode_TypeDef m_Mode;
-
-
-    GPIOSpeed_TypeDef m_Speed;
-
-
-    GPIOPOD_TypeDef m_OpenDrain;
-
-
-    GPIOPU_TypeDef m_PullUp;
-
-
-    GPIOPD_TypeDef m_PullDown;
-
-}GPIO_InitTypeDef;
-
-
-
-
-typedef enum
-{
-    Bit_RESET = 0,
-    Bit_SET = !Bit_RESET
-}BitAction;
-# 278 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_gpio.h"
-void GPIO_Reset (GPIO_SFRmap* GPIOx);
-void GPIO_Configuration (GPIO_SFRmap* GPIOx, GPIO_InitTypeDef* gpioInitStruct);
-void GPIO_Struct_Init (GPIO_InitTypeDef* gpioInitStruct);
-void GPIO_Pin_Lock_Config (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, FunctionalState NewState);
-void GPIO_Pull_Up_Enable (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, FunctionalState NewState);
-void GPIO_Toggle_Pull_Up_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-void GPIO_Pull_Down_Enable (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, FunctionalState NewState);
-void GPIO_Toggle_Pull_Down_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-void GPIO_Open_Drain_Enable (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, GPIOPOD_TypeDef NewState);
-void GPIO_Toggle_Open_Drain_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-void GPIO_Write_Mode_Bits (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, GPIOMode_TypeDef NewState);
-void GPIO_Speed_Config (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, GPIOSpeed_TypeDef NewState);
-void GPIO_Toggle_Speed_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-
-BitAction GPIO_Read_Input_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-uint16_t GPIO_Read_Input_Data (GPIO_SFRmap* GPIOx);
-BitAction GPIO_Read_Output_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-uint16_t GPIO_Read_Output_Data (GPIO_SFRmap* GPIOx);
-void GPIO_Set_Output_Data_Bits (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPin, BitAction BitsValue);
-void GPIO_Toggle_Output_Data_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
-
-void GPIO_Pin_RMP_Config (GPIO_SFRmap* GPIOx,
-                    uint16_t GpioPinNum, uint8_t PinRemap);
-# 6 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_usart.h" 2
+# 5 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_usart.h" 2
 
 typedef enum
 {
@@ -820,56 +735,57 @@ typedef enum
   COM4 = 3,
 
 } usart_typedef_t;
-# 62 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_usart.h"
+# 61 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_usart.h"
 void bsp_usart_init(usart_typedef_t com_id);
-void GPIO_USART(GPIO_SFRmap* GPIOx, uint16_t PIN, uint16_t PIN_NUM, uint8_t PIN_RMP);
-void USART_Async_config(USART_SFRmap *USARTx);
-void USART_Sync_config(USART_SFRmap* USARTx);
-void USART_ReceiveInt_config(USART_SFRmap *USARTx,InterruptIndex Peripheral);
-void USART_Send(USART_SFRmap* USARTx, uint8_t* Databuf, uint32_t length);
-void Usart_line_feed(USART_SFRmap *USARTx);
-# 11 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_flash.h" 1
-# 74 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp_flash.h"
-void FLASH_HALFPAGE_WRITECODE_fun(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
-void FLASH_PageWrite_fun(uint32_t address,uint32_t *p_FlashBuffer,uint8_t length);
-void FLASH_WriteCODE_ONE(uint32_t address,uint32_t *p_FlashBuffer);
-void FLASH_READCODE_fun(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+# 7 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_flash.h" 1
+# 65 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp_flash.h"
+void flash_erase_page(uint32_t address);
+void flash_erase_range(uint32_t start_addr, uint32_t end_addr);
+
+
+uint32_t flash_read_byte(uint32_t address,uint8_t *p_FlashBuffer);
+uint32_t flash_read_halfword(uint32_t address,uint16_t *p_FlashBuffer);
+uint32_t flash_read_word(uint32_t address,uint32_t *p_FlashBuffer);
+void flash_read_nbyte(uint32_t Address, uint8_t *Buffers, uint32_t Length);
+void flash_read_multiple_word(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+
+void flash_write_byte(uint32_t address,uint8_t p_FlashBuffer);
+void flash_write_nbyte(uint32_t address,uint8_t *p_FlashBuffer,uint32_t length);
+void flash_write_halfword(uint32_t address,uint16_t p_FlashBuffer);
+void flash_write_word(uint32_t address,uint32_t p_FlashBuffer);
+void flash_write_doubleword(uint32_t address,uint32_t *p_FlashBuffer);
+void flash_write_half_page(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
+void flash_write_page(uint32_t address,uint32_t *p_FlashBuffer,uint8_t length);
 
 
 void FLASH_WriteCFG_ONE(uint32_t address,uint32_t *p_FlashBuffer);
 void FLASH_HALFPAGE_WRITECFG_fun(uint32_t address,uint32_t *p_FlashBuffer,uint32_t length);
 void FLASH_PageWrite_CFG_fun(uint32_t address,uint32_t *p_FlashBuffer,uint8_t length);
-
-
-void FLASH_WriteByte(uint32_t address,uint8_t p_FlashBuffer);
-void FLASH_WriteHalfWord(uint32_t address,uint16_t p_FlashBuffer);
-void FLASH_WriteWord(uint32_t address,uint32_t p_FlashBuffer);
-void FLASH_WriteNByte(uint32_t address,uint8_t *p_FlashBuffer,uint32_t leng);
-
-uint32_t FLASH_ReadByte(uint32_t address,uint8_t *p_FlashBuffer);
-uint32_t FLASH_ReadHalWord(uint32_t address,uint16_t *p_FlashBuffer);
-uint32_t FLASH_ReadWord(uint32_t address,uint32_t *p_FlashBuffer);
-void FlashReadNByte(unsigned int Address, unsigned int Length, unsigned char *Buffers);
-# 12 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+# 8 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
 
 
 
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Middle/delay.h" 1
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Driver/boot.h" 1
 
 
 
 
 
-void delay_ms(volatile uint32_t nms);
-# 17 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+
+uint8_t iap_is_app_valid(uint32_t app_addr);
+void iap_jump_to_app(uint32_t app_addr);
+# 13 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
 
 
 
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_usart.h" 1
-# 36 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_usart.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h" 1
+# 15 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/KF32F_BASIC.h" 1
+# 16 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h" 2
+# 36 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
 typedef struct
 {
     uint32_t m_Mode;
@@ -910,7 +826,7 @@ typedef struct
     uint8_t m_Egt;
 
 } U7816R_InitTypeDef;
-# 325 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_usart.h"
+# 325 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_usart.h"
 void USART_Reset (USART_SFRmap* USARTx);
 void USART_Configuration (USART_SFRmap* USARTx,
                     USART_InitTypeDef* usartInitStruct);
@@ -1032,9 +948,9 @@ void USART_Clear_Transmit_BUFR_INT_Flag (USART_SFRmap* USARTx);
 FlagStatus USART_Get_WUEN_Flag (USART_SFRmap* USARTx);
 FlagStatus USART_Get_Auto_BaudRate_Detection_Flag(USART_SFRmap* USARTx);
 void USART_RESHD_Enable (USART_SFRmap* USARTx, FunctionalState NewState);
-# 22 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_int.h" 1
-# 24 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_int.h"
+# 18 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h" 1
+# 24 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h"
 typedef struct
 {
     uint32_t m_Line;
@@ -1048,7 +964,7 @@ typedef struct
     uint32_t m_Source;
 
 } EINT_InitTypeDef;
-# 143 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_int.h"
+# 143 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_int.h"
 uint8_t INT_Get_Interrupt_Action (void);
 uint8_t INT_Get_Priority_Pending_Action (void);
 void INT_Priority_Base (uint8_t PriBase);
@@ -1081,10 +997,108 @@ void INT_External_Fall_Enable (uint32_t EintMask, FunctionalState NewState);
 FlagStatus INT_Get_External_Flag (uint32_t EintNum);
 void INT_External_Clear_Flag (uint32_t EintNum);
 void INT_External_Source_Enable (uint32_t EintNum, uint32_t PeripheralSource);
-# 23 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+# 19 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h" 1
+# 33 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_NOPULL = 0x00,
+    GPIO_PULLUP = 0x01
+}GPIOPU_TypeDef, GPIOPD_TypeDef;
+# 47 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_POD_PP = 0x00,
+    GPIO_POD_OD = 0x01
+}GPIOPOD_TypeDef;
 
-# 1 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_flash.h" 1
-# 18 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_flash.h"
+
+
+
+
+
+typedef enum
+{
+    GPIO_MODE_IN = 0x00,
+    GPIO_MODE_OUT = 0x01,
+    GPIO_MODE_RMP = 0x02,
+    GPIO_MODE_AN = 0x03
+}GPIOMode_TypeDef;
+# 73 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+typedef enum
+{
+    GPIO_LOW_SPEED = 0,
+    GPIO_HIGH_SPEED = 1
+}GPIOSpeed_TypeDef;
+
+
+
+
+
+
+typedef struct
+{
+    uint32_t m_Pin;
+
+
+    GPIOMode_TypeDef m_Mode;
+
+
+    GPIOSpeed_TypeDef m_Speed;
+
+
+    GPIOPOD_TypeDef m_OpenDrain;
+
+
+    GPIOPU_TypeDef m_PullUp;
+
+
+    GPIOPD_TypeDef m_PullDown;
+
+}GPIO_InitTypeDef;
+
+
+
+
+typedef enum
+{
+    Bit_RESET = 0,
+    Bit_SET = !Bit_RESET
+}BitAction;
+# 278 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_gpio.h"
+void GPIO_Reset (GPIO_SFRmap* GPIOx);
+void GPIO_Configuration (GPIO_SFRmap* GPIOx, GPIO_InitTypeDef* gpioInitStruct);
+void GPIO_Struct_Init (GPIO_InitTypeDef* gpioInitStruct);
+void GPIO_Pin_Lock_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Pull_Up_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Toggle_Pull_Up_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Pull_Down_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, FunctionalState NewState);
+void GPIO_Toggle_Pull_Down_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Open_Drain_Enable (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOPOD_TypeDef NewState);
+void GPIO_Toggle_Open_Drain_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+void GPIO_Write_Mode_Bits (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOMode_TypeDef NewState);
+void GPIO_Speed_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, GPIOSpeed_TypeDef NewState);
+void GPIO_Toggle_Speed_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+
+BitAction GPIO_Read_Input_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+uint16_t GPIO_Read_Input_Data (GPIO_SFRmap* GPIOx);
+BitAction GPIO_Read_Output_Data_Bit (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+uint16_t GPIO_Read_Output_Data (GPIO_SFRmap* GPIOx);
+void GPIO_Set_Output_Data_Bits (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPin, BitAction BitsValue);
+void GPIO_Toggle_Output_Data_Config (GPIO_SFRmap* GPIOx, uint16_t GpioPin);
+
+void GPIO_Pin_RMP_Config (GPIO_SFRmap* GPIOx,
+                    uint16_t GpioPinNum, uint8_t PinRemap);
+# 20 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
+# 1 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h" 1
+# 18 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h"
 typedef enum
 {
     LOCK = 0,
@@ -1118,7 +1132,7 @@ typedef struct
     uint32_t * m_Data;
 
 }FLASH_ProgramTypeDef;
-# 142 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\Peripherals\\inc/kf32f_basic_flash.h"
+# 142 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripherals\\inc/kf32f_basic_flash.h"
 LockStatus FLASH_Get_NonVolatile_Memory_Unlock_Status_RAM (void);
 void FLASH_Clear_NonVolatile_Memory_Unlock_Status_RAM (void);
 void FLASH_Unlock_ISP_RAM (void);
@@ -1187,7 +1201,7 @@ uint32_t Read_Soft_Device_ID1(void);
 uint32_t Read_Soft_Device_ID2(void);
 uint32_t Read_Soft_Device_ID3(void);
 uint32_t Read_Soft_Device_ID4(void);
-# 25 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+# 21 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
 
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h" 1
 # 12 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
@@ -1251,7 +1265,7 @@ extern int vsnprintf (char *s, unsigned int n, const char *format, va_list ap);
 # 212 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/stdio.h"
 extern void printf_small (const char *fmt, ...);
 extern void printf_tiny (const char *fmt, ...);
-# 27 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+# 23 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
 # 1 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h" 1
 # 26 "D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys/string.h"
 extern int ffs (int);
@@ -1284,35 +1298,18 @@ extern size_t strxfrm(char *, const char *, size_t);
 
 
 extern char * strdup(const char *);
-# 28 "E:\\KF_Workspace\\Project_WorkSpace\\SmartDriver_Bootloader\\BSP/bsp.h" 2
+# 24 "E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\BSP/bsp.h" 2
 
 
 
 void bsp_init(void);
-# 2 "../Driver/boot.c" 2
+# 10 "../Driver/boot.c" 2
 
 typedef void (*pFunction)(void);
 
+static uint32_t iap_get_appstackpointer(uint32_t app_addr);
+static uint32_t iap_get_jumpaddress(uint32_t app_addr);
 
-
-
-
-
-
-uint32_t iap_get_appstackpointer(uint32_t app_addr)
-{
-    return (*((volatile uint32_t *)app_addr));
-}
-
-
-
-
-
-
-static uint32_t iap_get_jumpaddress(uint32_t app_addr)
-{
-    return (*((volatile uint32_t *)(app_addr + 4U)));
-}
 
 
 
@@ -1344,4 +1341,24 @@ void iap_jump_to_app(uint32_t app_addr)
 
     jump_to_app();
 
+}
+
+
+
+
+
+
+static uint32_t iap_get_appstackpointer(uint32_t app_addr)
+{
+    return (*((volatile uint32_t *)app_addr));
+}
+
+
+
+
+
+
+static uint32_t iap_get_jumpaddress(uint32_t app_addr)
+{
+    return (*((volatile uint32_t *)(app_addr + 4U)));
 }

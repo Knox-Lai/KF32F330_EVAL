@@ -57,21 +57,107 @@ delay_ms:
 	.cfi_endproc
 .LFE1:
 	.size	delay_ms, .-delay_ms
+	.section .text$delay_tick_cnt_up
+	.type	.text$delay_tick_cnt_up$scode_local_2, @function
+	.text$delay_tick_cnt_up$scode_local_2:
+	.align	1
+	.export	delay_tick_cnt_up
+	.type	delay_tick_cnt_up, @function
+delay_tick_cnt_up:
+.LFB2:
+.LM7:
+	.cfi_startproc
+.LM8:
+	LD	r5,#delay_tick_count
+	LD.w	r4,[r5]
+	ADD	r4,r4,#1
+	ST.w	[r5],r4
+.LM9:
+	JMP	lr
+	.cfi_endproc
+.LFE2:
+	.size	delay_tick_cnt_up, .-delay_tick_cnt_up
+	.section .text$delay_tick_get
+	.type	.text$delay_tick_get$scode_local_3, @function
+	.text$delay_tick_get$scode_local_3:
+	.align	1
+	.export	delay_tick_get
+	.type	delay_tick_get, @function
+delay_tick_get:
+.LFB3:
+.LM10:
+	.cfi_startproc
+.LM11:
+	LD	r5,#delay_tick_count
+	LD.w	r0,[r5]
+.LM12:
+	JMP	lr
+	.cfi_endproc
+.LFE3:
+	.size	delay_tick_get, .-delay_tick_get
+	.section .text$delay_ms_timer
+	.type	.text$delay_ms_timer$scode_local_4, @function
+	.text$delay_ms_timer$scode_local_4:
+	.align	1
+	.export	delay_ms_timer
+	.type	delay_ms_timer, @function
+delay_ms_timer:
+.LFB4:
+.LM13:
+	.cfi_startproc
+.LVL8:
+	SUB	sp,#4
+	.cfi_def_cfa_offset 4
+	ST.w	[sp],r0
+.LBB6:
+.LBB7:
+.LM14:
+	LD	r3,#delay_tick_count
+	LD.w	r2,[r3]
+.L12:
+.LBE7:
+.LBE6:
+.LBB8:
+.LBB9:
+.LM15:
+	LD.w	r5,[r3]
+.LBE9:
+.LBE8:
+.LM16:
+	LD.w	r4,[sp]
+	SUB	r5,r5,r2
+	CMP	r4,r5
+	JHI	.L12
+.LM17:
+	ADD	sp,#4
+	.cfi_def_cfa_offset 0
+	JMP	lr
+	.cfi_endproc
+.LFE4:
+	.size	delay_ms_timer, .-delay_ms_timer
+	.section .bss$data.static$delay_tick_count
+	.type	.bss$data.static$delay_tick_count$scode_local_5, @function
+	.bss$data.static$delay_tick_count$scode_local_5:
+	.align	2
+	.type	delay_tick_count, @object
+	.size	delay_tick_count, 4
+delay_tick_count:
+	.fill 4, 1
 	.text	
 .Letext0:
 	.section .debug_info
-	.type	.debug_info$scode_local_2, @function
-	.debug_info$scode_local_2:
+	.type	.debug_info$scode_local_6, @function
+	.debug_info$scode_local_6:
 .Ldebug_info0:
-	.long	0xb8
+	.long	0x150
 	.short	0x3
 	.long	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.long	.LASF9
+	.long	.LASF13
 	.byte	0x1
-	.long	.LASF10
-	.long	.LASF11
+	.long	.LASF14
+	.long	.LASF15
 	.long	.Ldebug_ranges0+0
 	.long	0
 	.long	0
@@ -101,7 +187,7 @@ delay_ms:
 	.byte	0x5
 	.long	.LASF4
 	.uleb128 0x4
-	.long	.LASF12
+	.long	.LASF16
 	.byte	0x2
 	.byte	0x1a
 	.long	0x30
@@ -125,39 +211,113 @@ delay_ms:
 	.long	.LASF8
 	.uleb128 0x6
 	.byte	0x1
-	.long	.LASF13
+	.long	.LASF17
 	.byte	0x1
-	.byte	0xb
+	.byte	0x1d
+	.byte	0x1
+	.long	0x53
+	.byte	0x1
+	.uleb128 0x7
+	.byte	0x1
+	.long	.LASF9
+	.byte	0x1
+	.byte	0xd
 	.byte	0x1
 	.long	.LFB1
 	.long	.LFE1
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uleb128 0x7
+	.long	0xcd
+	.uleb128 0x8
 	.string	"nms"
 	.byte	0x1
-	.byte	0xb
+	.byte	0xd
 	.long	0x73
 	.byte	0x1
 	.byte	0x50
-	.uleb128 0x8
+	.uleb128 0x9
 	.string	"i"
 	.byte	0x1
-	.byte	0xd
+	.byte	0xf
 	.long	0x73
 	.long	.LLST0
-	.uleb128 0x8
+	.uleb128 0x9
 	.string	"j"
 	.byte	0x1
-	.byte	0xd
+	.byte	0xf
 	.long	0x73
 	.long	.LLST1
 	.byte	0
+	.uleb128 0xa
+	.byte	0x1
+	.long	.LASF18
+	.byte	0x1
+	.byte	0x18
+	.byte	0x1
+	.long	.LFB2
+	.long	.LFE2
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uleb128 0xb
+	.long	0x7f
+	.long	.LFB3
+	.long	.LFE3
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uleb128 0x7
+	.byte	0x1
+	.long	.LASF10
+	.byte	0x1
+	.byte	0x29
+	.byte	0x1
+	.long	.LFB4
+	.long	.LFE4
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.long	0x142
+	.uleb128 0x8
+	.string	"nms"
+	.byte	0x1
+	.byte	0x29
+	.long	0x73
+	.byte	0x1
+	.byte	0x50
+	.uleb128 0xc
+	.long	.LASF11
+	.byte	0x1
+	.byte	0x2b
+	.long	0x53
+	.byte	0x1
+	.byte	0x52
+	.uleb128 0xd
+	.long	0x7f
+	.long	.LBB6
+	.long	.LBE6
+	.byte	0x1
+	.byte	0x2b
+	.uleb128 0xd
+	.long	0x7f
+	.long	.LBB8
+	.long	.LBE8
+	.byte	0x1
+	.byte	0x2e
+	.byte	0
+	.uleb128 0xc
+	.long	.LASF12
+	.byte	0x1
+	.byte	0x6
+	.long	0x73
+	.byte	0x5
+	.byte	0x3
+	.long	delay_tick_count
 	.byte	0
 	.section .debug_abbrev
-	.type	.debug_abbrev$scode_local_3, @function
-	.debug_abbrev$scode_local_3:
+	.type	.debug_abbrev$scode_local_7, @function
+	.debug_abbrev$scode_local_7:
 .Ldebug_abbrev0:
 	.uleb128 0x1
 	.uleb128 0x11
@@ -224,7 +384,81 @@ delay_ms:
 	.byte	0
 	.uleb128 0x6
 	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x20
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x2e
 	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x2e
+	.byte	0
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -245,11 +479,26 @@ delay_ms:
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-	.uleb128 0x7
-	.uleb128 0x5
+	.uleb128 0xb
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -260,25 +509,25 @@ delay_ms:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x8
-	.uleb128 0x34
+	.uleb128 0xd
+	.uleb128 0x1d
 	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
+	.uleb128 0x31
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.byte	0
 	.section .debug_loc
-	.type	.debug_loc$scode_local_4, @function
-	.debug_loc$scode_local_4:
+	.type	.debug_loc$scode_local_8, @function
+	.debug_loc$scode_local_8:
 .Ldebug_loc0:
 .LLST0:
 	.long	.LVL1
@@ -310,9 +559,9 @@ delay_ms:
 	.long	0
 	.long	0
 	.section .debug_aranges
-	.type	.debug_aranges$scode_local_5, @function
-	.debug_aranges$scode_local_5:
-	.long	0x1c
+	.type	.debug_aranges$scode_local_9, @function
+	.debug_aranges$scode_local_9:
+	.long	0x34
 	.short	0x2
 	.long	.Ldebug_info0
 	.byte	0x4
@@ -321,19 +570,31 @@ delay_ms:
 	.short	0
 	.long	.LFB1
 	.long	.LFE1-.LFB1
+	.long	.LFB2
+	.long	.LFE2-.LFB2
+	.long	.LFB3
+	.long	.LFE3-.LFB3
+	.long	.LFB4
+	.long	.LFE4-.LFB4
 	.long	0
 	.long	0
 	.section .debug_ranges
-	.type	.debug_ranges$scode_local_6, @function
-	.debug_ranges$scode_local_6:
+	.type	.debug_ranges$scode_local_10, @function
+	.debug_ranges$scode_local_10:
 .Ldebug_ranges0:
 	.long	.LFB1
 	.long	.LFE1
+	.long	.LFB2
+	.long	.LFE2
+	.long	.LFB3
+	.long	.LFE3
+	.long	.LFB4
+	.long	.LFE4
 	.long	0
 	.long	0
 	.section .debug_line
-	.type	.debug_line$scode_local_7, @function
-	.debug_line$scode_local_7:
+	.type	.debug_line$scode_local_11, @function
+	.debug_line$scode_local_11:
 .Ldebug_line0:
 	.long	.LELT0-.LSLT0
 .LSLT0:
@@ -376,7 +637,7 @@ delay_ms:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM1
-	.byte	0x22
+	.byte	0x24
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -417,34 +678,130 @@ delay_ms:
 	.byte	0
 	.uleb128 0x1
 	.byte	0x1
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM7
+	.byte	0x2f
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM8
+	.byte	0x18
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM9
+	.byte	0x18
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LFE2
+	.byte	0
+	.uleb128 0x1
+	.byte	0x1
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM10
+	.byte	0x34
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM11
+	.byte	0x1a
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM12
+	.byte	0x18
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LFE3
+	.byte	0
+	.uleb128 0x1
+	.byte	0x1
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM13
+	.byte	0x40
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM14
+	.byte	0xe
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM15
+	.byte	0
+	.uleb128 0x2
+	.byte	0x4
+	.uleb128 0x1
+	.byte	0x6
+	.byte	0x1
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM16
+	.byte	0x6
+	.byte	0x24
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LM17
+	.byte	0
+	.uleb128 0x2
+	.byte	0x4
+	.uleb128 0
+	.byte	0x1b
+	.byte	0
+	.uleb128 0x5
+	.byte	0x2
+	.long	.LFE4
+	.byte	0
+	.uleb128 0x1
+	.byte	0x1
 .LELT0:
 	.section .debug_str
-	.type	.debug_str$scode_local_8, @function
-	.debug_str$scode_local_8:
+	.type	.debug_str$scode_local_12, @function
+	.debug_str$scode_local_12:
 .LASF5:
 	.string	"long long int"
 .LASF1:
 	.string	"short unsigned int"
 .LASF0:
 	.string	"unsigned int"
-.LASF11:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
-.LASF9:
+.LASF16:
+	.string	"uint32_t"
+.LASF13:
 	.string	"GNU C 4.7.0"
-.LASF10:
+.LASF14:
 	.string	"../Middle/delay.c"
+.LASF18:
+	.string	"delay_tick_cnt_up"
+.LASF15:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF6:
 	.string	"long long unsigned int"
 .LASF3:
 	.string	"unsigned char"
 .LASF7:
 	.string	"char"
+.LASF10:
+	.string	"delay_ms_timer"
 .LASF12:
-	.string	"uint32_t"
-.LASF13:
+	.string	"delay_tick_count"
+.LASF17:
+	.string	"delay_tick_get"
+.LASF9:
 	.string	"delay_ms"
 .LASF2:
 	.string	"signed char"
+.LASF11:
+	.string	"start_tick"
 .LASF4:
 	.string	"short int"
 .LASF8:

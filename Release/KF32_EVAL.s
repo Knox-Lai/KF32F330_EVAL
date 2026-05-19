@@ -36,11 +36,11 @@ kf_eval_usart_init:
 	MOV	r3,r0
 	LSL	r3,#2
 	MOV	r9,r3
-	LD	r5,#COM_GPIO_PORT
+	LD	r5,#EVAL_COM_GPIO_PORT
 	LD.w	r7,[r5+r3]
 	ADD	r4,r0,r0
 	MOV	r8,r4
-	LD	r5,#COM_TX_PIN
+	LD	r5,#EVAL_COM_TX_PIN
 	LD.h	r5,[r5+r4]
 	ZXT.h	r10,r5
 	MOV	r0,r7
@@ -51,11 +51,11 @@ kf_eval_usart_init:
 .LVL2:
 .LM5:
 	MOV	r0,r7
-	LD	r5,#COM_TX_PIN_NUM
+	LD	r5,#EVAL_COM_TX_PIN_NUM
 	MOV	r3,r8
 	LD.h	r5,[r5+r3]
 	ZXT.h	r1,r5
-	LD	r5,#COM_TX_PIN_RMP
+	LD	r5,#EVAL_COM_TX_PIN_RMP
 	LD.b	r2,[r5+r6]
 	LJMP	GPIO_Pin_RMP_Config
 .LVL3:
@@ -66,7 +66,7 @@ kf_eval_usart_init:
 	LJMP	GPIO_Pin_Lock_Config
 .LVL4:
 .LM7:
-	LD	r5,#COM_RX_PIN
+	LD	r5,#EVAL_COM_RX_PIN
 	MOV	r4,r8
 	LD.h	r5,[r5+r4]
 	ZXT.h	r10,r5
@@ -77,11 +77,11 @@ kf_eval_usart_init:
 .LVL5:
 .LM8:
 	MOV	r0,r7
-	LD	r5,#COM_RX_PIN_NUM
+	LD	r5,#EVAL_COM_RX_PIN_NUM
 	MOV	r3,r8
 	LD.h	r5,[r5+r3]
 	ZXT.h	r1,r5
-	LD	r5,#COM_RX_PIN_RMP
+	LD	r5,#EVAL_COM_RX_PIN_RMP
 	LD.b	r2,[r5+r6]
 	LJMP	GPIO_Pin_RMP_Config
 .LVL6:
@@ -109,7 +109,7 @@ kf_eval_usart_init:
 	MOV	r4,#2
 	ST.h	[sp+#22],r4
 .LM16:
-	LD	r4,#COM_BAUD
+	LD	r4,#EVAL_COM_BAUD
 	MOV	r3,r9
 	LD.w	r4,[r4+r3]
 	LD	r3,#115200
@@ -121,7 +121,7 @@ kf_eval_usart_init:
 	JZ	.L9
 .L4:
 .LM18:
-	LD	r5,#COM_USART
+	LD	r5,#EVAL_COM_USART
 	MOV	r4,r9
 	LD.w	r6,[r5+r4]
 .LVL9:
@@ -358,101 +358,101 @@ GPIO_PORT:
 	.long	1342177728
 	.long	1342177728
 	.long	1342177472
-	.section .rdata$COM_GPIO_PORT
-	.type	.rdata$COM_GPIO_PORT$scode_local_8, @function
-	.rdata$COM_GPIO_PORT$scode_local_8:
+	.section .rdata$EVAL_COM_GPIO_PORT
+	.type	.rdata$EVAL_COM_GPIO_PORT$scode_local_8, @function
+	.rdata$EVAL_COM_GPIO_PORT$scode_local_8:
 	.align	2
-	.type	COM_GPIO_PORT, @object
-	.size	COM_GPIO_PORT, 16
-COM_GPIO_PORT:
+	.type	EVAL_COM_GPIO_PORT, @object
+	.size	EVAL_COM_GPIO_PORT, 16
+EVAL_COM_GPIO_PORT:
 	.long	1342177280
 	.long	1342177280
 	.long	1342177280
 	.long	1342177408
-	.section .rdata$COM_TX_PIN
-	.type	.rdata$COM_TX_PIN$scode_local_9, @function
-	.rdata$COM_TX_PIN$scode_local_9:
+	.section .rdata$EVAL_COM_TX_PIN
+	.type	.rdata$EVAL_COM_TX_PIN$scode_local_9, @function
+	.rdata$EVAL_COM_TX_PIN$scode_local_9:
 	.align	1
-	.type	COM_TX_PIN, @object
-	.size	COM_TX_PIN, 8
-COM_TX_PIN:
+	.type	EVAL_COM_TX_PIN, @object
+	.size	EVAL_COM_TX_PIN, 8
+EVAL_COM_TX_PIN:
 	.short	8
 	.short	64
 	.short	2
 	.short	2048
-	.section .rdata$COM_TX_PIN_NUM
-	.type	.rdata$COM_TX_PIN_NUM$scode_local_10, @function
-	.rdata$COM_TX_PIN_NUM$scode_local_10:
+	.section .rdata$EVAL_COM_TX_PIN_NUM
+	.type	.rdata$EVAL_COM_TX_PIN_NUM$scode_local_10, @function
+	.rdata$EVAL_COM_TX_PIN_NUM$scode_local_10:
 	.align	1
-	.type	COM_TX_PIN_NUM, @object
-	.size	COM_TX_PIN_NUM, 8
-COM_TX_PIN_NUM:
+	.type	EVAL_COM_TX_PIN_NUM, @object
+	.size	EVAL_COM_TX_PIN_NUM, 8
+EVAL_COM_TX_PIN_NUM:
 	.short	3
 	.short	6
 	.short	1
 	.short	11
-	.section .rdata$COM_TX_PIN_RMP
-	.type	.rdata$COM_TX_PIN_RMP$scode_local_11, @function
-	.rdata$COM_TX_PIN_RMP$scode_local_11:
+	.section .rdata$EVAL_COM_TX_PIN_RMP
+	.type	.rdata$EVAL_COM_TX_PIN_RMP$scode_local_11, @function
+	.rdata$EVAL_COM_TX_PIN_RMP$scode_local_11:
 	.align	2
-	.type	COM_TX_PIN_RMP, @object
-	.size	COM_TX_PIN_RMP, 4
-COM_TX_PIN_RMP:
+	.type	EVAL_COM_TX_PIN_RMP, @object
+	.size	EVAL_COM_TX_PIN_RMP, 4
+EVAL_COM_TX_PIN_RMP:
 	.byte	6
 	.byte	6
 	.byte	5
 	.byte	5
-	.section .rdata$COM_RX_PIN
-	.type	.rdata$COM_RX_PIN$scode_local_12, @function
-	.rdata$COM_RX_PIN$scode_local_12:
+	.section .rdata$EVAL_COM_RX_PIN
+	.type	.rdata$EVAL_COM_RX_PIN$scode_local_12, @function
+	.rdata$EVAL_COM_RX_PIN$scode_local_12:
 	.align	1
-	.type	COM_RX_PIN, @object
-	.size	COM_RX_PIN, 8
-COM_RX_PIN:
+	.type	EVAL_COM_RX_PIN, @object
+	.size	EVAL_COM_RX_PIN, 8
+EVAL_COM_RX_PIN:
 	.short	4
 	.short	32
 	.short	1
 	.short	1024
-	.section .rdata$COM_RX_PIN_NUM
-	.type	.rdata$COM_RX_PIN_NUM$scode_local_13, @function
-	.rdata$COM_RX_PIN_NUM$scode_local_13:
+	.section .rdata$EVAL_COM_RX_PIN_NUM
+	.type	.rdata$EVAL_COM_RX_PIN_NUM$scode_local_13, @function
+	.rdata$EVAL_COM_RX_PIN_NUM$scode_local_13:
 	.align	1
-	.type	COM_RX_PIN_NUM, @object
-	.size	COM_RX_PIN_NUM, 8
-COM_RX_PIN_NUM:
+	.type	EVAL_COM_RX_PIN_NUM, @object
+	.size	EVAL_COM_RX_PIN_NUM, 8
+EVAL_COM_RX_PIN_NUM:
 	.short	2
 	.short	5
 	.short	0
 	.short	10
-	.section .rdata$COM_RX_PIN_RMP
-	.type	.rdata$COM_RX_PIN_RMP$scode_local_14, @function
-	.rdata$COM_RX_PIN_RMP$scode_local_14:
+	.section .rdata$EVAL_COM_RX_PIN_RMP
+	.type	.rdata$EVAL_COM_RX_PIN_RMP$scode_local_14, @function
+	.rdata$EVAL_COM_RX_PIN_RMP$scode_local_14:
 	.align	2
-	.type	COM_RX_PIN_RMP, @object
-	.size	COM_RX_PIN_RMP, 4
-COM_RX_PIN_RMP:
+	.type	EVAL_COM_RX_PIN_RMP, @object
+	.size	EVAL_COM_RX_PIN_RMP, 4
+EVAL_COM_RX_PIN_RMP:
 	.byte	6
 	.byte	6
 	.byte	5
 	.byte	11
-	.section .rdata$COM_BAUD
-	.type	.rdata$COM_BAUD$scode_local_15, @function
-	.rdata$COM_BAUD$scode_local_15:
+	.section .rdata$EVAL_COM_BAUD
+	.type	.rdata$EVAL_COM_BAUD$scode_local_15, @function
+	.rdata$EVAL_COM_BAUD$scode_local_15:
 	.align	2
-	.type	COM_BAUD, @object
-	.size	COM_BAUD, 16
-COM_BAUD:
+	.type	EVAL_COM_BAUD, @object
+	.size	EVAL_COM_BAUD, 16
+EVAL_COM_BAUD:
 	.long	115200
 	.long	115200
 	.long	115200
 	.long	115200
-	.section .rdata$COM_USART
-	.type	.rdata$COM_USART$scode_local_16, @function
-	.rdata$COM_USART$scode_local_16:
+	.section .rdata$EVAL_COM_USART
+	.type	.rdata$EVAL_COM_USART$scode_local_16, @function
+	.rdata$EVAL_COM_USART$scode_local_16:
 	.align	2
-	.type	COM_USART, @object
-	.size	COM_USART, 16
-COM_USART:
+	.type	EVAL_COM_USART, @object
+	.size	EVAL_COM_USART, 16
+EVAL_COM_USART:
 	.long	1073744640
 	.long	1073749632
 	.long	1073744256
@@ -1271,7 +1271,7 @@ COM_USART:
 	.byte	0x1
 	.long	.LASF166
 	.byte	0x1
-	.byte	0x21
+	.byte	0x1e
 	.byte	0x1
 	.long	.LFB1
 	.long	.LFE1
@@ -1282,13 +1282,13 @@ COM_USART:
 	.uleb128 0x17
 	.long	.LASF168
 	.byte	0x1
-	.byte	0x21
+	.byte	0x1e
 	.long	0x485
 	.long	.LLST0
 	.uleb128 0x18
 	.long	.LASF169
 	.byte	0x1
-	.byte	0x2f
+	.byte	0x2c
 	.long	0x655
 	.byte	0x3
 	.byte	0x91
@@ -1324,7 +1324,7 @@ COM_USART:
 	.byte	0x76
 	.sleb128 0
 	.byte	0x3
-	.long	COM_TX_PIN_RMP
+	.long	EVAL_COM_TX_PIN_RMP
 	.byte	0x22
 	.byte	0x94
 	.byte	0x1
@@ -1338,7 +1338,7 @@ COM_USART:
 	.byte	0x78
 	.sleb128 0
 	.byte	0x3
-	.long	COM_TX_PIN_NUM
+	.long	EVAL_COM_TX_PIN_NUM
 	.byte	0x22
 	.byte	0x94
 	.byte	0x2
@@ -1404,7 +1404,7 @@ COM_USART:
 	.byte	0x76
 	.sleb128 0
 	.byte	0x3
-	.long	COM_RX_PIN_RMP
+	.long	EVAL_COM_RX_PIN_RMP
 	.byte	0x22
 	.byte	0x94
 	.byte	0x1
@@ -1418,7 +1418,7 @@ COM_USART:
 	.byte	0x78
 	.sleb128 0
 	.byte	0x3
-	.long	COM_RX_PIN_NUM
+	.long	EVAL_COM_RX_PIN_NUM
 	.byte	0x22
 	.byte	0x94
 	.byte	0x2
@@ -1548,7 +1548,7 @@ COM_USART:
 	.byte	0x1
 	.long	.LASF167
 	.byte	0x1
-	.byte	0x5a
+	.byte	0x59
 	.byte	0x1
 	.long	.LFB2
 	.long	.LFE2
@@ -1559,13 +1559,13 @@ COM_USART:
 	.uleb128 0x1c
 	.string	"Led"
 	.byte	0x1
-	.byte	0x5a
+	.byte	0x59
 	.long	0x459
 	.long	.LLST1
 	.uleb128 0x18
 	.long	.LASF170
 	.byte	0x1
-	.byte	0x5c
+	.byte	0x5b
 	.long	0x578
 	.byte	0x2
 	.byte	0x91
@@ -1594,7 +1594,7 @@ COM_USART:
 	.byte	0x1
 	.long	.LASF171
 	.byte	0x1
-	.byte	0x70
+	.byte	0x6f
 	.byte	0x1
 	.long	.LFB3
 	.long	.LFE3
@@ -1605,7 +1605,7 @@ COM_USART:
 	.uleb128 0x1c
 	.string	"Led"
 	.byte	0x1
-	.byte	0x70
+	.byte	0x6f
 	.long	0x459
 	.long	.LLST2
 	.uleb128 0x1b
@@ -1638,7 +1638,7 @@ COM_USART:
 	.byte	0x1
 	.long	.LASF172
 	.byte	0x1
-	.byte	0x7a
+	.byte	0x79
 	.byte	0x1
 	.long	.LFB4
 	.long	.LFE4
@@ -1649,7 +1649,7 @@ COM_USART:
 	.uleb128 0x1c
 	.string	"Led"
 	.byte	0x1
-	.byte	0x7a
+	.byte	0x79
 	.long	0x459
 	.long	.LLST3
 	.uleb128 0x1b
@@ -1682,7 +1682,7 @@ COM_USART:
 	.byte	0x1
 	.long	.LASF173
 	.byte	0x1
-	.byte	0x7f
+	.byte	0x7e
 	.byte	0x1
 	.long	.LFB5
 	.long	.LFE5
@@ -1693,7 +1693,7 @@ COM_USART:
 	.uleb128 0x1c
 	.string	"Led"
 	.byte	0x1
-	.byte	0x7f
+	.byte	0x7e
 	.long	0x459
 	.long	.LLST4
 	.uleb128 0x1b
@@ -1730,11 +1730,11 @@ COM_USART:
 	.uleb128 0x18
 	.long	.LASF174
 	.byte	0x1
-	.byte	0xb
+	.byte	0x8
 	.long	0x936
 	.byte	0x5
 	.byte	0x3
-	.long	COM_USART
+	.long	EVAL_COM_USART
 	.uleb128 0xa
 	.long	0x90f
 	.uleb128 0xc
@@ -1750,11 +1750,11 @@ COM_USART:
 	.uleb128 0x18
 	.long	.LASF175
 	.byte	0x1
-	.byte	0xc
+	.byte	0x9
 	.long	0x962
 	.byte	0x5
 	.byte	0x3
-	.long	COM_GPIO_PORT
+	.long	EVAL_COM_GPIO_PORT
 	.uleb128 0xa
 	.long	0x93b
 	.uleb128 0xc
@@ -1767,21 +1767,21 @@ COM_USART:
 	.uleb128 0x18
 	.long	.LASF176
 	.byte	0x1
-	.byte	0xe
+	.byte	0xb
 	.long	0x988
 	.byte	0x5
 	.byte	0x3
-	.long	COM_TX_PIN_NUM
+	.long	EVAL_COM_TX_PIN_NUM
 	.uleb128 0xa
 	.long	0x967
 	.uleb128 0x18
 	.long	.LASF177
 	.byte	0x1
-	.byte	0xf
+	.byte	0xc
 	.long	0x99e
 	.byte	0x5
 	.byte	0x3
-	.long	COM_RX_PIN_NUM
+	.long	EVAL_COM_RX_PIN_NUM
 	.uleb128 0xa
 	.long	0x967
 	.uleb128 0xc
@@ -1794,51 +1794,51 @@ COM_USART:
 	.uleb128 0x18
 	.long	.LASF178
 	.byte	0x1
-	.byte	0x11
+	.byte	0xe
 	.long	0x9c4
 	.byte	0x5
 	.byte	0x3
-	.long	COM_TX_PIN_RMP
+	.long	EVAL_COM_TX_PIN_RMP
 	.uleb128 0xa
 	.long	0x9a3
 	.uleb128 0x18
 	.long	.LASF179
 	.byte	0x1
-	.byte	0x12
+	.byte	0xf
 	.long	0x9da
 	.byte	0x5
 	.byte	0x3
-	.long	COM_RX_PIN_RMP
+	.long	EVAL_COM_RX_PIN_RMP
 	.uleb128 0xa
 	.long	0x9a3
 	.uleb128 0x18
 	.long	.LASF180
 	.byte	0x1
-	.byte	0x14
+	.byte	0x11
 	.long	0x9f0
 	.byte	0x5
 	.byte	0x3
-	.long	COM_TX_PIN
+	.long	EVAL_COM_TX_PIN
 	.uleb128 0xa
 	.long	0x967
 	.uleb128 0x18
 	.long	.LASF181
 	.byte	0x1
-	.byte	0x15
+	.byte	0x12
 	.long	0xa06
 	.byte	0x5
 	.byte	0x3
-	.long	COM_RX_PIN
+	.long	EVAL_COM_RX_PIN
 	.uleb128 0xa
 	.long	0x967
 	.uleb128 0x18
 	.long	.LASF182
 	.byte	0x1
-	.byte	0x17
+	.byte	0x14
 	.long	0xa1c
 	.byte	0x5
 	.byte	0x3
-	.long	COM_BAUD
+	.long	EVAL_COM_BAUD
 	.uleb128 0xa
 	.long	0x42e
 	.uleb128 0xc
@@ -1851,7 +1851,7 @@ COM_USART:
 	.uleb128 0x1e
 	.long	.LASF188
 	.byte	0x1
-	.byte	0x19
+	.byte	0x16
 	.long	0xa3c
 	.uleb128 0xa
 	.long	0xa21
@@ -1865,7 +1865,7 @@ COM_USART:
 	.uleb128 0x1f
 	.long	.LASF183
 	.byte	0x1
-	.byte	0x8
+	.byte	0x50
 	.long	0xa41
 	.byte	0x1
 	.byte	0x5
@@ -1881,7 +1881,7 @@ COM_USART:
 	.uleb128 0x1f
 	.long	.LASF184
 	.byte	0x1
-	.byte	0x9
+	.byte	0x51
 	.long	0xa85
 	.byte	0x1
 	.byte	0x5
@@ -2444,8 +2444,8 @@ COM_USART:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"KF32_EVAL.c"
@@ -2478,7 +2478,7 @@ COM_USART:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM1
-	.byte	0x38
+	.byte	0x35
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -2639,7 +2639,7 @@ COM_USART:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM31
-	.byte	0x71
+	.byte	0x70
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -2691,7 +2691,7 @@ COM_USART:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM40
-	.byte	0x87
+	.byte	0x86
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -2713,7 +2713,7 @@ COM_USART:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM43
-	.byte	0x91
+	.byte	0x90
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -2735,7 +2735,7 @@ COM_USART:
 	.uleb128 0x5
 	.byte	0x2
 	.long	.LM46
-	.byte	0x96
+	.byte	0x95
 	.byte	0
 	.uleb128 0x5
 	.byte	0x2
@@ -2763,10 +2763,10 @@ COM_USART:
 	.string	"INT_NMI"
 .LASF64:
 	.string	"INT_EINT19TO17"
-.LASF177:
-	.string	"COM_RX_PIN_NUM"
 .LASF18:
 	.string	"INT_StackFault"
+.LASF180:
+	.string	"EVAL_COM_TX_PIN"
 .LASF133:
 	.string	"GPIOPOD_TypeDef"
 .LASF16:
@@ -2779,24 +2779,28 @@ COM_USART:
 	.string	"usart_typedef"
 .LASF0:
 	.string	"unsigned int"
-.LASF151:
-	.string	"m_HalfDuplexClkSource"
+.LASF187:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF143:
 	.string	"m_Mode"
+.LASF176:
+	.string	"EVAL_COM_TX_PIN_NUM"
 .LASF110:
 	.string	"TBUFR"
 .LASF155:
 	.string	"m_Bit9SEL"
+.LASF182:
+	.string	"EVAL_COM_BAUD"
 .LASF76:
 	.string	"INT_USB"
+.LASF178:
+	.string	"EVAL_COM_TX_PIN_RMP"
 .LASF52:
 	.string	"INT_ADC0"
 .LASF53:
 	.string	"INT_ADC1"
 .LASF85:
 	.string	"INT_ADC2"
-.LASF181:
-	.string	"COM_RX_PIN"
 .LASF132:
 	.string	"GPIO_POD_OD"
 .LASF23:
@@ -2849,32 +2853,34 @@ COM_USART:
 	.string	"INT_SPI2"
 .LASF162:
 	.string	"m_BaudRateInteger"
-.LASF49:
-	.string	"INT_T15"
 .LASF9:
 	.string	"long long unsigned int"
 .LASF173:
 	.string	"kf_eval_led_toggle"
 .LASF145:
 	.string	"m_OpenDrain"
-.LASF131:
-	.string	"GPIO_POD_PP"
+.LASF122:
+	.string	"EVAL_COM1"
+.LASF123:
+	.string	"EVAL_COM2"
+.LASF124:
+	.string	"EVAL_COM3"
 .LASF118:
-	.string	"LED3"
+	.string	"LED1"
 .LASF119:
-	.string	"LED4"
+	.string	"LED2"
 .LASF120:
-	.string	"LED5"
+	.string	"LED3"
 .LASF168:
 	.string	"com_id"
 .LASF107:
 	.string	"CTMDCTL"
 .LASF144:
 	.string	"m_Speed"
-.LASF175:
-	.string	"COM_GPIO_PORT"
 .LASF167:
 	.string	"kf_eval_led_init"
+.LASF151:
+	.string	"m_HalfDuplexClkSource"
 .LASF164:
 	.string	"m_BaudRateDenominator"
 .LASF17:
@@ -2891,8 +2897,8 @@ COM_USART:
 	.string	"INT_DMA0"
 .LASF63:
 	.string	"INT_DMA1"
-.LASF180:
-	.string	"COM_TX_PIN"
+.LASF125:
+	.string	"EVAL_COM4"
 .LASF140:
 	.string	"GPIO_HIGH_SPEED"
 .LASF27:
@@ -2925,8 +2931,6 @@ COM_USART:
 	.string	"uint8_t"
 .LASF172:
 	.string	"kf_eval_led_off"
-.LASF176:
-	.string	"COM_TX_PIN_NUM"
 .LASF129:
 	.string	"GPIOPU_TypeDef"
 .LASF79:
@@ -2963,14 +2967,14 @@ COM_USART:
 	.string	"INT_T10"
 .LASF48:
 	.string	"INT_T14"
-.LASF187:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
-.LASF178:
-	.string	"COM_TX_PIN_RMP"
+.LASF49:
+	.string	"INT_T15"
 .LASF86:
 	.string	"INT_T18"
 .LASF87:
 	.string	"INT_T19"
+.LASF181:
+	.string	"EVAL_COM_RX_PIN"
 .LASF13:
 	.string	"INT_Initial_SP"
 .LASF55:
@@ -3015,6 +3019,10 @@ COM_USART:
 	.string	"uint16_t"
 .LASF100:
 	.string	"INT_USART7"
+.LASF174:
+	.string	"EVAL_COM_USART"
+.LASF188:
+	.string	"EVAL_COM_INT"
 .LASF171:
 	.string	"kf_eval_led_on"
 .LASF58:
@@ -3055,12 +3063,14 @@ COM_USART:
 	.string	"INT_SPI0"
 .LASF67:
 	.string	"INT_T9"
-.LASF179:
-	.string	"COM_RX_PIN_RMP"
+.LASF177:
+	.string	"EVAL_COM_RX_PIN_NUM"
 .LASF150:
 	.string	"Bit_SET"
 .LASF138:
 	.string	"GPIOMode_TypeDef"
+.LASF121:
+	.string	"led_typedef"
 .LASF154:
 	.string	"m_StopBits"
 .LASF186:
@@ -3071,22 +3081,8 @@ COM_USART:
 	.string	"GPIO_NOPULL"
 .LASF71:
 	.string	"INT_OSC"
-.LASF188:
-	.string	"COM_INT"
-.LASF121:
-	.string	"Led_TypeDef"
-.LASF122:
-	.string	"COM1"
-.LASF123:
-	.string	"COM2"
-.LASF124:
-	.string	"COM3"
-.LASF125:
-	.string	"COM4"
 .LASF139:
 	.string	"GPIO_LOW_SPEED"
-.LASF182:
-	.string	"COM_BAUD"
 .LASF148:
 	.string	"GPIO_InitTypeDef"
 .LASF3:
@@ -3111,6 +3107,8 @@ COM_USART:
 	.string	"INT_CAN4"
 .LASF50:
 	.string	"INT_CAN5"
+.LASF175:
+	.string	"EVAL_COM_GPIO_PORT"
 .LASF183:
 	.string	"GPIO_PORT"
 .LASF101:
@@ -3119,6 +3117,8 @@ COM_USART:
 	.string	"BRGR"
 .LASF2:
 	.string	"signed char"
+.LASF179:
+	.string	"EVAL_COM_RX_PIN_RMP"
 .LASF1:
 	.string	"short unsigned int"
 .LASF184:
@@ -3129,10 +3129,10 @@ COM_USART:
 	.string	"GPIO_MODE_OUT"
 .LASF159:
 	.string	"m_BRAutoDetect"
-.LASF174:
-	.string	"COM_USART"
 .LASF117:
 	.string	"USART_SFRmap"
+.LASF131:
+	.string	"GPIO_POD_PP"
 .LASF109:
 	.string	"GPIO_SFRmap"
 	.ident	"GCC: (GNU) 4.7.0-Dec 25 2025-16:17:10"

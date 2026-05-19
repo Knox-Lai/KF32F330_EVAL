@@ -8019,8 +8019,8 @@ CCP_Clear_Channel_INT_Flag:
 	.byte	0
 	.ascii	"D:/ResearchSoftware/KungFu32/ChipONCC32/include/Sys"
 	.byte	0
-	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\TEST_Prj\\Peripherals\\"
-	.ascii	"inc"
+	.ascii	"E:\\KF_Workspace\\Project_WorkSpace\\KF32F330_EVAL\\Peripher"
+	.ascii	"als\\inc"
 	.byte	0
 	.byte	0
 	.string	"kf32f_basic_gptim.c"
@@ -11271,8 +11271,8 @@ CCP_Clear_Channel_INT_Flag:
 	.string	"GPTIM_Get_Direction"
 .LASF0:
 	.string	"unsigned int"
-.LASF12:
-	.string	"FunctionalState"
+.LASF153:
+	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\KF32F330_EVAL\\\\Release"
 .LASF42:
 	.string	"m_Period"
 .LASF149:
@@ -11415,8 +11415,6 @@ CCP_Clear_Channel_INT_Flag:
 	.string	"GPTIM_Updata_INT_Enable"
 .LASF71:
 	.string	"gptimInitStruct"
-.LASF153:
-	.string	"E:\\\\KF_Workspace\\\\Project_WorkSpace\\\\TEST_Prj\\\\Release"
 .LASF102:
 	.string	"GPTIM_Trigger_INT_Enable"
 .LASF108:
@@ -11433,6 +11431,8 @@ CCP_Clear_Channel_INT_Flag:
 	.string	"GPTIM_Trigger_Select_Config"
 .LASF109:
 	.string	"GPTIM_Overflow_INT_Enable"
+.LASF12:
+	.string	"FunctionalState"
 .LASF16:
 	.string	"CTL1"
 .LASF17:
